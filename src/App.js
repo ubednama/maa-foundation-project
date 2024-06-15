@@ -1,9 +1,10 @@
-import './App.css';
+import "./App.css";
+import Contact from "./Components/Contact/Contact";
 
 function App() {
   return (
     <>
-    start your project
+      <Contact />
     </>
   );
 }
