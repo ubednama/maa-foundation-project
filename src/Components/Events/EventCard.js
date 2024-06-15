@@ -8,7 +8,7 @@ const EventCard = ({ image, title, subtitle, path, flag }) => {
     // main div
     <div className="w-full flex justify-center">
       <div
-        className={`w-11/12 flex xl:flex-row flex-col justify-center items-center xl:gap-24 gap-4 ${flag}`}
+        className={`w-11/12 flex xl:${flag} flex-col justify-center items-center xl:gap-24 gap-4 `}
       >
         <img src={image} className=""></img>
 
