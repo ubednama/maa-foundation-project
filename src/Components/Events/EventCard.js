@@ -13,12 +13,14 @@ const EventCard = ({ image, title, subtitle, path, flag }) => {
         <img src={image} className=""></img>
 
         <div className="flex flex-col justify-center items-start gap-9 max-w-[590px]">
-          <div className="font-semibold md:text-[40px] text-[30px]">{title}</div>
+          <div className="font-semibold md:text-[40px] text-[30px]">
+            {title}
+          </div>
           <div className="font-normal text-[18px] text-[#666666]">
             {subtitle}
           </div>
           <Link to={path}>
-            <button className="flex items-center justify-center gap-3 font-semibold">
+            <button className="flex items-center justify-center gap-3 font-bold text-blue-500 hover:text-blue-700">
               Learn More <GoArrowRight></GoArrowRight>
             </button>
           </Link>

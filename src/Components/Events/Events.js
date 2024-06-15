@@ -4,7 +4,7 @@ import EventCard from "./EventCard";
 
 const Events = () => {
   return (
-    <div className="flex flex-col gap-52 m-7">
+    <div className="flex flex-col gap-20 xl:gap-52 m-7">
       {events.map((data, index) => (
         <EventCard
           key={index}
