@@ -1,3 +1,5 @@
+// this is a constant file which is used to pass dummy data for now. this data should be taken from backend
+
 const Image1 = "/Images/Rectangle 43.jpg";
 const Image2 = "/Images/Rectangle 44.jpg";
 const Image3 = "/Images/Rectangle 46.jpg";
