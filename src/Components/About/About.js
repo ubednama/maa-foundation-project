@@ -26,7 +26,7 @@ const About = () => {
         h-[110vh] w-full  mb-3
         max-[767px]:h-[110vh]  
         max-[620px]:h-[115vh]  
-        max-[556px]:h-[130vh]    n
+        max-[556px]:h-[130vh]  
         max-[431px]:h-[130vh]  
         max-[415px]:h-[130vh] 
         max-[400px]:h-[142vh] 
@@ -89,9 +89,9 @@ const About = () => {
 
     {/* 2nd section mobile view  */}
 
-    <div className=' min-[913px]:hidden h-[90vh] w-full   ' >
+    <div className=' min-[913px]:hidden min-h-auto w-full   ' >
           
-          <div className=' h-screen w-full flex flex-col items-center space-y-[31px] ' >
+          <div className=' flex flex-col items-center space-y-[31px] ' >
             
           <h1 className=" font-Open Sans max-[540px]:text-[43px] max-[400px]:text-[30px] max-[376px]:text-[27px]  text-[50px] text-[#FA4040] font-semibold"  >Founder & President</h1>
 
