@@ -11,7 +11,7 @@ const About = () => {
 
         <h1 className="font-Open Sans lg:text-[40px] xl:text-[52px] text-[#FA4040] font-semibold"  >Maa Foundation</h1>
       
-        <p className=' lg:text-[18px] xl:text-[21px] mt-8 text-justify ' >
+        <p className=' lg:text-[18px] xl:text-[21px] mt-8 text-start ' >
 
           <span className='text-[#FA4040]' >MAA FOUNDATION </span>is a beacon of hope and empowerment, dedicated to nurturing the potential of orphaned children and fostering the advancement of women through education. With a firm belief in the transformative power of learning, MAA Foundation tirelessly works to bridge the educational gaps in society. Their initiatives range from career counseling and life skills education for students to parenting sessions aimed at guiding children's growth effectively. Embracing the spirit of selflessness and unconditional love, MAA Foundation collaborates with various stakeholders to amplify their impact, ensuring that every project is scalable and replicable, thus extending their reach to more communities in need. Their vision is not only to educate but to instill values and skills that will empower individuals to build a brighter, self-sustaining future.
         </p>
@@ -43,7 +43,7 @@ const About = () => {
           <img className=' h-[30%] w-[83%] ' src='/images/img1.jpg' alt='img' />
 
 
-          <p className='  px-[7.5%]  text-[20px] text-justify ' >
+          <p className='  px-[7.5%]  text-[20px] text-start ' >
 
           <span className='text-[#FA4040]' >MAA FOUNDATION</span> is a beacon of hope and empowerment, dedicated to nurturing the potential of orphaned children and fostering the advancement of women through education. With a firm belief in the transformative power of learning, MAA Foundation tirelessly works to bridge the educational gaps in society. Their initiatives range from career counseling and life skills education for students, to parenting sessions aimed at guiding children's growth effectively. Embracing the spirit of selflessness and unconditional love, MAA Foundation collaborates with various stakeholders to amplify their impact, ensuring that every project is scalable and replicable, thus extending their reach to more communities in need. Their vision is not only to educate but to instill values and skills that will empower individuals to build a brighter, self-sustaining future.
         </p>
@@ -69,16 +69,16 @@ const About = () => {
 
         <h1 className=" text-right font-Open Sans lg:text-[40px] xl:text-[52px] text-[#FA4040] font-semibold"  >Founder & President</h1>
        
-        <p className=' lg:text-[18px] xl:text-[21px] mt-8 text-justify ' >
+        <p className=' lg:text-[18px] xl:text-[21px] mt-8 text-start ' >
 
           <span className='text-[#FA4040]' >Richa Bashistha</span>, a dedicated and compassionate individual, is known for her significant contributions to the Railway Ministry of India. However, her work extends beyond her professional commitments. She is the driving force behind the MAA Foundation, an organization that has been transforming lives and making a difference in society.
         </p>
        
-        <p className=' lg:text-[18px] xl:text-[21px] mt-8 text-justify ' >The
+        <p className=' lg:text-[18px] xl:text-[21px] mt-8 text-start ' >The
           <span className='text-[#FA4040]' > Maa Foundation</span>,  under Richa's leadership, has been working tirelessly to uplift orphan children and empower women. The foundation offers resources that provide a career counselling program, personality development camps (life skill education), and many more self-improvement tools. For parents, they offer parenting sessions to nurture their children correctly.
         </p>
         
-        <p className=' lg:text-[18px] xl:text-[21px]  mt-8 text-justify ' >Richa's vision for the MAA Foundation is not just about providing immediate help. It's about equipping individuals with the skills and knowledge they need to improve their own lives and contribute positively to society. Her work with the foundation reflects her belief in the power of education and the importance of providing equal opportunities for everyone.
+        <p className=' lg:text-[18px] xl:text-[21px]  mt-8 text-start ' >Richa's vision for the MAA Foundation is not just about providing immediate help. It's about equipping individuals with the skills and knowledge they need to improve their own lives and contribute positively to society. Her work with the foundation reflects her belief in the power of education and the importance of providing equal opportunities for everyone.
         </p>
 
       </div>
@@ -98,13 +98,13 @@ const About = () => {
           <img className=' h-[40%] w-[60%] ' src='/images/img2.jpg' alt='img' />
 
 
-          <p className='   px-[7.5%]  text-[20px] text-justify ' >
+          <p className='   px-[7.5%]  text-[20px] text-start ' >
           <span className='text-[#FA4040]' >Richa Bashistha</span>, a dedicated and compassionate individual, is known for her significant contributions to the Railway Ministry of India. However, her work extends beyond her professional commitments. She is the driving force behind the MAA Foundation, an organization that has been transforming lives and making a difference in society.
         </p>
-          <p className='  px-[7.5%]  text-[20px] text-justify ' >
+          <p className='  px-[7.5%]  text-[20px] text-start ' >
           <span className='text-[#FA4040]' > Maa Foundation</span>,  under Richa's leadership, has been working tirelessly to uplift orphan children and empower women. The foundation offers resources that provide a career counselling program, personality development camps (life skill education), and many more self-improvement tools. For parents, they offer parenting sessions to nurture their children correctly.
         </p>
-          <p className='  px-[7.5%]  text-[20px] text-justify ' >
+          <p className='  px-[7.5%]  text-[20px] text-start ' >
           Richa's vision for the MAA Foundation is not just about providing immediate help. It's about equipping individuals with the skills and knowledge they need to improve their own lives and contribute positively to society. Her work with the foundation reflects her belief in the power of education and the importance of providing equal opportunities for everyone.
         </p>
 
