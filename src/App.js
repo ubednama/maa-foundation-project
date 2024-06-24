@@ -1,4 +1,7 @@
-import './App.css';
+
+import "./App.css";
+
+
 import Footer from './Components/Common/Footer/Footer';
 import Header from './Components/Common/Header/Header';
 import Home from './Components/Home/Home';
@@ -14,6 +17,7 @@ import Contact from './Components/Contact/Contact';
 function App() {
   return (
     <>
+
     <Router>
         <Header />
         <Routes>
@@ -28,6 +32,7 @@ function App() {
         </Routes>
         <Footer />
       </Router>
+
     </>
   );
 }
