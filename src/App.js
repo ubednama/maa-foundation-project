@@ -5,7 +5,7 @@ import "./App.css";
 import Footer from './Components/Common/Footer/Footer';
 import Header from './Components/Common/Header/Header';
 import Home from './Components/Home/Home';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Events from './Components/Events/Events';
 import Gallery from './Components/Gallery/Gallery';
 import Blogs from './Components/Blog/Blogs';
@@ -18,7 +18,7 @@ function App() {
   return (
     <>
 
-    <Router>
+    <>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -31,7 +31,7 @@ function App() {
           
         </Routes>
         <Footer />
-      </Router>
+      </>
 
     </>
   );

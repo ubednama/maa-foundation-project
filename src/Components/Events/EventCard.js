@@ -5,16 +5,22 @@ import React from "react";
 import { GoArrowRight } from "react-icons/go";
 import { Link } from "react-router-dom";
 
-const EventCard = ({ image, title, subtitle, path, flag }) => {
+const EventCard = ({ image, title, subtitle, path, index }) => {
   return (
-    // main div
-    <div className="w-full flex justify-center">
-      {/* div for image */}
+    // wrapper div
+    <div className={`w-full flex justify-center`}>
+      {/* main div */}
       <div
-        className={`w-11/12 flex xl:${flag} flex-col justify-center items-center xl:gap-24 gap-4 `}
+        className={`w-11/12 flex flex-col items-center gap-4 lg:gap-24 lg:flex-row ${
+          index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+        } justify-center`}
       >
-        <img src={image} className=""></img>
+        {/* image div */}
+        <div>
+          <img src={image} className="" alt="error" />
+        </div>
 
+        {/* content div */}
         <div className="flex flex-col justify-center items-start gap-9 max-w-[590px]">
           {/* title */}
           <div className="font-semibold md:text-[40px] text-[30px]">
