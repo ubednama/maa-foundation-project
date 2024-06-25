@@ -5,7 +5,7 @@ import "./App.css";
 import Footer from './Components/Common/Footer/Footer';
 import Header from './Components/Common/Header/Header';
 import Home from './Components/Home/Home';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Events from './Components/Events/Events';
 import Gallery from './Components/Gallery/Gallery';
 import Blogs from './Components/Blog/Blogs';
@@ -17,8 +17,14 @@ import Contact from './Components/Contact/Contact';
 function App() {
   return (
     <>
-    <Header />
+// <<<<<<< component/add-login-component
+//     <Header />
         
+// =======
+
+//     <>
+        <Header />
+// >>>>>>> main
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/event" element={<Events />} />
@@ -29,7 +35,12 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           
         </Routes>
+// <<<<<<< component/add-login-component
       <Footer />
+// =======
+//         <Footer />
+//       </>
+// >>>>>>> main
 
     </>
   );
