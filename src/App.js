@@ -17,9 +17,8 @@ import Contact from './Components/Contact/Contact';
 function App() {
   return (
     <>
-
-    <Router>
-        <Header />
+    <Header />
+        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/event" element={<Events />} />
@@ -30,8 +29,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           
         </Routes>
-        <Footer />
-      </Router>
+      <Footer />
 
     </>
   );
