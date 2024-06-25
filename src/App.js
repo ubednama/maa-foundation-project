@@ -17,9 +17,14 @@ import Contact from './Components/Contact/Contact';
 function App() {
   return (
     <>
+// <<<<<<< component/add-login-component
+//     <Header />
+        
+// =======
 
-    <>
+//     <>
         <Header />
+// >>>>>>> main
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/event" element={<Events />} />
@@ -30,8 +35,12 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           
         </Routes>
-        <Footer />
-      </>
+// <<<<<<< component/add-login-component
+      <Footer />
+// =======
+//         <Footer />
+//       </>
+// >>>>>>> main
 
     </>
   );
