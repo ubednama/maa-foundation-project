@@ -9,6 +9,7 @@ import { Routes, Route } from "react-router-dom";
 import Events from './Components/Events/Events';
 import Gallery from './Components/Gallery/Gallery';
 import Blogs from './Components/Blog/Blogs';
+import BlogOpenPage from './Components/Blog/BlogOpenPage';
 import About from './Components/About/About';
 import Login from './Components/Login/Login';
 import Contact from './Components/Contact/Contact';
@@ -17,30 +18,23 @@ import Contact from './Components/Contact/Contact';
 function App() {
   return (
     <>
-// <<<<<<< component/add-login-component
-//     <Header />
-        
-// =======
-
-//     <>
-        <Header />
-// >>>>>>> main
+   <Header />
+      
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/event" element={<Events />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/blog" element={<Blogs />} />
+          <Route path="/blogdata" element={<BlogOpenPage/>}>
+            <Route path=":blogdataId" element={<BlogOpenPage/>} />
+          </Route>
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route path="/contact" element={<Contact />} />
           
         </Routes>
-// <<<<<<< component/add-login-component
-      <Footer />
-// =======
-//         <Footer />
-//       </>
-// >>>>>>> main
+    <Footer />
+
 
     </>
   );
