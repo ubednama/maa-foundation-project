@@ -17,14 +17,7 @@ import Contact from './Components/Contact/Contact';
 function App() {
   return (
     <>
-// <<<<<<< component/add-login-component
-//     <Header />
-        
-// =======
-
-//     <>
-        <Header />
-// >>>>>>> main
+      <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/event" element={<Events />} />
@@ -33,15 +26,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route path="/contact" element={<Contact />} />
-          
         </Routes>
-// <<<<<<< component/add-login-component
       <Footer />
-// =======
-//         <Footer />
-//       </>
-// >>>>>>> main
-
     </>
   );
 }
