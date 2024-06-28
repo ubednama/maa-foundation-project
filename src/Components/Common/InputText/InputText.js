@@ -1,17 +1,14 @@
-import React, { useState } from "react";
-
-const InputText = ({ placeholder, name, className = "", value }) => {
-  const [val, setVal] = useState("");
+const InputText = ({ type = "text", placeholder, name, className = "", value, onChange }) => {
   return (
     <>
       <input
-        type="text"
+        type={type}
         className={`bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 lg:p-4 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-400 ${className}`}
         placeholder={placeholder}
         name={name}
         id={name}
-        onChange={(e) => setVal(e.target.value)}
-        value={val || value}
+        onChange={onChange}
+        value={value}
         aria-label={placeholder}
       />
     </>

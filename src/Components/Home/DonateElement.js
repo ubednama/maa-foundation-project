@@ -1,18 +1,36 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import InputText from "../Common/InputText/InputText";
+import validator from "validator";
 
 const DonateElement = () => {
-  const [donationAmount, setDonationAmount] = useState("");
+  const [donationData, setDonationData] = useState({
+    name: "",
+    email: "",
+    donationAmount: ""
+  });
 
   const handleButtonClick = (amount) => {
-    setDonationAmount(amount);
+    setDonationData((prevData) => ({
+      ...prevData,
+      donationAmount: amount
+    }));
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setDonationData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    //ToDo: add submit logic
-    console.log("Donation Amount:", donationAmount);
+    // ToDo: add submit logic
+    if (donationData.email.trim() !== "" && validator.isEmail(donationData.email)) {} //ToDo: only move email when this satisfied
+    else {} //don't submit email
+    console.log("Donation Data:", donationData);
   };
 
   return (
@@ -47,8 +65,10 @@ const DonateElement = () => {
             </button>
           </div>
           <InputText 
-            type="text"
-            value={donationAmount}
+            type="number"
+            name="donationAmount"
+            value={donationData.donationAmount}
+            onChange={handleChange}
             className="bg-gray-100 border border-gray-300 text-gray-500 text-sm rounded-lg block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-400"
             placeholder="Rs/- Enter Amount"
           />

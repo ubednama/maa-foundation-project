@@ -71,7 +71,7 @@ const Home = () => {
         </div>
        
         <section
-          className="w-full h-auto md:h-[790px] lg:h-[844px] mb-10"
+          className="w-full h-auto md:h-[790px] lg:h-[844px] mb-10 flex justify-center sm:block"
           style={{
             background: `linear-gradient(89.63deg,#ffffff 39.45%,rgba(0, 0, 0, 0.62) 70.46%), 
     url('/assets/maa.png')`,
@@ -82,14 +82,12 @@ const Home = () => {
           }}
         >
           <div className="w-full max-w-sm  md:max-w-lg m-4 p-4 md:m-16">
-            <div className="w-full max-w-md  mt-6">
+            <div className="w-full max-w-md mt-6">
               <span className="font-medium text-[#EC1D1E] text-xl sm:text-lg md:text-xl lg:text-2xl leading-8 tracking-wide block text-center">
                 MAA FOUNDATION
               </span>
-              <span className="font-normal font-lato text-base sm:text-sm md:text-base lg:text-lg leading-8 tracking-wide block text-center mt-4">
-                has been working in India for over 70 years, for the upliftment
-                of marginalised women and girls through 53 programmes in 18
-                states and 130+ districts.
+              <span className="font-normal font-lato text-base sm:text-sm md:text-base lg:text-lg leading-6 tracking-wide block text-center mt-4">
+                has been working in India for over 70 years, for the upliftment of marginalised women and girls through 53 programmes in 18 states and 130+ districts.
               </span>
               <p className="mt-4 bg-gray-100 border border-gray-300 text-gray-900 text-normal rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-400">
                 MAA FOUNDATION PAN NUMBER : A125D4G46d

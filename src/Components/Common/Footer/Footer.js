@@ -77,7 +77,7 @@ function Footer() {
                 className="w-full p-2 mb-4 border border-gray-300 rounded-md"
               />
               <button
-                className="absolute right-1 lg:right-2 text-center align-middle text-normal font-semibold text-white bg-[#EC1D1E] w-[95px] rounded-md top-2"
+                className="absolute right-2 text-center align-middle text-normal font-semibold text-white bg-[#EC1D1E] w-[95px] rounded-md top-2"
                 type="button"
               >
                 Subscribe

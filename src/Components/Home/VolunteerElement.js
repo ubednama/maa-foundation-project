@@ -1,8 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import InputText from "../Common/InputText/InputText";
 import Heading from "./Heading";
+import validator from "validator";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const VolunteerElement = () => {
+
+  const [dateOfBirth, setDateOfBirth] = useState(new Date());
+  const [volunteerData, setVolunteerData] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    // dob: "",
+    address: "",
+    reason: "",
+    agreed: false,
+  });
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    if (name === "phoneNumber") {
+      const formattedValue = value.replace(/\D/g, '').slice(0, 10);
+      setVolunteerData((prevData) => ({
+        ...prevData,
+        [name]: formattedValue,
+      }));
+    } else {
+      setVolunteerData((prevData) => ({
+        ...prevData,
+        [name]: type === "checkbox" ? checked : value,
+      }));
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // ToDo: Process Volunteer data
+    if (volunteerData.email.trim() !== "" && validator.isEmail(volunteerData.email)) console.log("Volunteer Data:", volunteerData);
+    else {
+      //ToDo: display toast here for invalid email
+    }
+  };
+
   return (
     <div className="">
       <div className="flex justify-center items-center">
@@ -18,19 +58,63 @@ const VolunteerElement = () => {
         }}
       >
         <div className="flex items-center sm:h-full justify-center sm:justify-end sm:mr-[5%]">
-          <form className="mt-2 space-y-3 xl:space-y-5 sm:mt-10 w-[80%] sm:w-full sm:max-w-96 lg:max-w-md xl:max-w-lg">
-            <InputText placeholder={"Your Name"} name={"name"} />
-            <InputText placeholder={"Your Mail"} name={"mail"} />
+          <form className="mt-2 space-y-3 xl:space-y-5 sm:mt-10 w-[80%] sm:w-full sm:max-w-96 lg:max-w-md xl:max-w-lg"
+            onSubmit={handleSubmit}>
             <InputText
-              placeholder={"Your Number (optional)"}
-              name={"phoneNumber"}
+              placeholder={"Your Name"}
+              name={"name"}
+              value={volunteerData.name}
+              onChange={handleChange}
             />
-            <InputText placeholder={"DOB"} name={"dob"} />
-            <InputText placeholder={"Your Address"} name={"your address"} />
+            <InputText
+              placeholder={"Your email"}
+              name={"email"}
+              value={volunteerData.email}
+              onChange={handleChange}
+            />
+            <div className="flex items-center gap-1">
+              <span className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 lg:p-4 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-400 px-3 py-2.5">+91</span>
+              <InputText
+                placeholder={"Your Number (optional)"}
+                name={"phoneNumber"}
+                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                type="tel"
+                value={volunteerData.phoneNumber}
+                onChange={handleChange}
+                maxLength={10}
+              />
+            </div>
+            {/* <InputText
+              placeholder={"DOB"}
+              name={"dob"}
+              value={volunteerData.dob}
+              onChange={handleChange}
+            /> */}
+            <div className="flex items-center gap-1 w-full">
+              <span className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 lg:p-4 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-400 px-3 py-2.5 w-1/3">Date of Birth:</span>
+              <div className="w-2/3 flex items-center justify-center bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg  dark:bg-gray-700 dark:border-gray-600 dark:text-gray-400">
+                <DatePicker
+                  className="dark:border-gray-600 border-gray-300 bg-gray-100 dark:bg-gray-700 p-2.5 lg:p-4"
+                  selected={dateOfBirth}
+                  onChange={(date) => setDateOfBirth(date)}
+                />
+              </div>
+            </div>
+
+
+            <InputText
+              placeholder={"Your Address"}
+              name={"address"}
+              value={volunteerData.address}
+              onChange={handleChange}
+            />
             <textarea
               className="w-full h-[184px] mb-5 bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-400"
               rows="10"
               placeholder="Why You Want to Join as Volunteer?"
+              name="reason"
+              value={volunteerData.reason}
+              onChange={handleChange}
             />
 
             <div className="flex items-center">
