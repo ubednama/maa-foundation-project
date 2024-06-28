@@ -91,7 +91,7 @@ const Home = () => {
                 of marginalised women and girls through 53 programmes in 18
                 states and 130+ districts.
               </span>
-              <p className="mt-12 bg-gray-100 border border-gray-300 text-gray-900 text-normal rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-400">
+              <p className="mt-4 bg-gray-100 border border-gray-300 text-gray-900 text-normal rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-400">
                 MAA FOUNDATION PAN NUMBER : A125D4G46d
               </p>
               <div className="mt-4">

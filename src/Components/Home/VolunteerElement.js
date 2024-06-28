@@ -12,13 +12,13 @@ const VolunteerElement = () => {
         className="volunteer w-full h-[882px] bg-cover bg-center bg-no-repeat mt-2 md:mt-10 "
         style={{
           background: `linear-gradient(261.68deg, #ffffff 6.38%, #ffffff 11.65%, #ffffff 17.15%, #ffffff 20.6%, #ffffff 24.43%, #ffffff 36.62%, #ffffff 41.71%, #ffffff 45.65%, rgba(203, 203, 203, 0.1) 89.6%), url('/assets/volunteer.png')`,
-          backgroundSize: "1200px 882px",
+          backgroundSize: "100% auto",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
       >
-        <div className="flex justify-end mr-12">
-          <form className="space-y-6 mt-24">
+        <div className="flex items-center sm:h-full justify-center sm:justify-end sm:mr-[5%]">
+          <form className="mt-2 space-y-3 xl:space-y-5 sm:mt-10 w-[80%] sm:w-full sm:max-w-96 lg:max-w-md xl:max-w-lg">
             <InputText placeholder={"Your Name"} name={"name"} />
             <InputText placeholder={"Your Mail"} name={"mail"} />
             <InputText
