@@ -12,6 +12,7 @@ import BlogOpenPage from './Components/Blog/BlogOpenPage';
 import About from './Components/About/About';
 import Login from './Components/Login/Login';
 import Contact from './Components/Contact/Contact';
+import EventDetail from "./Components/Events/EventDetail";
 
 
 function App() {
@@ -21,6 +22,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/event" element={<Events />} />
+          <Route path="/event-detail" element={<EventDetail/>}>
+          
+            <Route path=":eventid" element={<EventDetail/>}/>
+          </Route>
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/blog" element={<Blogs />} />
           <Route path="/blogdata" element={<BlogOpenPage/>}>

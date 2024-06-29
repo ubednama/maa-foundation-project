@@ -5,7 +5,13 @@ import React from "react";
 import { GoArrowRight } from "react-icons/go";
 import { Link } from "react-router-dom";
 
-const EventCard = ({ image, title, subtitle, path, index }) => {
+const EventCard = ({ image, title, subtitle, path, index, id}) => {
+
+  function scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+  
+
   return (
     // wrapper div
     <div className={`w-full flex justify-center`}>
@@ -33,7 +39,7 @@ const EventCard = ({ image, title, subtitle, path, index }) => {
           </div>
 
           {/* button for navigating to full event page */}
-          <Link to={path}>
+          <Link to={`/event-detail/${id}`} onClick={() => scrollToTop()}>
             <button className="flex items-center justify-center gap-3 font-bold text-blue-500 hover:text-blue-700">
               Learn More <GoArrowRight></GoArrowRight>
             </button>
