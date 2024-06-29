@@ -7,6 +7,7 @@ const Image4 = "/Images/Rectangle 47.jpg";
 
 export const events = [
   {
+    id:1,
     image: Image1,
     title: "Mother and child care camp",
     subtitle:
@@ -14,6 +15,7 @@ export const events = [
     path: "/event1",
   },
   {
+    id:2,
     image: Image2,
     title: "Women’s skill development ",
     subtitle:
@@ -21,6 +23,7 @@ export const events = [
     path: "/event2",
   },
   {
+    id:3,
     image: Image3,
     title: "Child care workshops",
     subtitle:
@@ -28,6 +31,7 @@ export const events = [
     path: "/event3",
   },
   {
+    id:4,
     image: Image4,
     title: "Free Medical camp",
     subtitle:

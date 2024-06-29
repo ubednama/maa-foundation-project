@@ -47,6 +47,7 @@ const Events = () => {
           title={data.title}
           subtitle={data.subtitle}
           path={data.path}
+          id={data.id}
           index={index}
         ></EventCard>
       ))}
