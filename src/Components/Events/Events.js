@@ -13,7 +13,7 @@ const Events = () => {
       {/* hero section */}
       <div className="w-11/12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
-          <div className="p-4 flex flex-col justify-center items-center md:items-start">
+          <div className="p-4 flex gap-7 flex-col justify-center items-center md:items-start">
             {/* First div content */}
             <h1 className="text-lg  sm:text-4xl md:text-4xl lg:text-5xl mb-4 font-bold">
               Transformative Programs for a{" "}
