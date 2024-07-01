@@ -132,7 +132,7 @@ const VolunteerElement = () => {
               </label>
             </div>
             <div className="flex items-center">
-              <button className="text-white  bg-[#EC1D1E] p-2 px-8 btn- rounded-xl mx-auto ">
+              <button className="text-white  bg-[#EC1D1E] p-2 px-8 btn- rounded-md mx-auto ">
                 Submit
               </button>
             </div>
