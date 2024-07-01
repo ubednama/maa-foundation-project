@@ -1,8 +1,13 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
+  const location = useLocation();
+
+  const linkStyle = (path) =>
+    location.pathname === path ? "text-red-600":"text-black-500";
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -11,7 +16,7 @@ const Header = () => {
 
   return (
     <nav className="relative px-4 py-4 flex justify-between items-center bg-white">
-      <NavLink className="text-3xl font-bold leading-none" to="#">
+      <NavLink className={`text-3xl font-bold leading-none`} to="#">
         <img
           alt="maa-logo"
           className="h-10 ml-10 mt-3"
@@ -46,7 +51,9 @@ const Header = () => {
       >
         <li>
           <NavLink
-            className="block lg:inline-block text-xl hover:text-[#EC1D1E] font-semibold hover:underline py-2 lg:py-0"
+            className={`block lg:inline-block text-xl hover:text-[#EC1D1E] font-semibold hover:underline py-2 lg:py-0 ${linkStyle(
+              "/"
+            )}`}
             to="/"
           >
             Home
@@ -54,7 +61,9 @@ const Header = () => {
         </li>
         <li>
           <NavLink
-            className="block lg:inline-block text-xl hover:text-[#EC1D1E] font-semibold hover:underline py-2 lg:py-0"
+            className={`block lg:inline-block text-xl hover:text-[#EC1D1E] font-semibold hover:underline py-2 lg:py-0 ${linkStyle(
+              "/event"
+            )}`}
             to="/event"
           >
             Event
@@ -62,7 +71,9 @@ const Header = () => {
         </li>
         <li>
           <NavLink
-            className="block lg:inline-block text-xl hover:text-[#EC1D1E] font-semibold hover:underline py-2 lg:py-0"
+            className={`block lg:inline-block text-xl hover:text-[#EC1D1E] font-semibold hover:underline py-2 lg:py-0 ${linkStyle(
+              "/gallery"
+            )}`}
             to="/gallery"
           >
             Gallery
@@ -70,7 +81,9 @@ const Header = () => {
         </li>
         <li>
           <NavLink
-            className="block lg:inline-block text-xl hover:text-[#EC1D1E] font-semibold hover:underline py-2 lg:py-0"
+            className={`block lg:inline-block text-xl hover:text-[#EC1D1E] font-semibold hover:underline py-2 lg:py-0 ${linkStyle(
+              "/blog"
+            )}`}
             to="/blog"
           >
             Blog
@@ -78,7 +91,9 @@ const Header = () => {
         </li>
         <li>
           <NavLink
-            className="block lg:inline-block text-xl hover:text-[#EC1D1E] font-semibold hover:underline py-2 lg:py-0"
+            className={`block lg:inline-block text-xl hover:text-[#EC1D1E] font-semibold hover:underline py-2 lg:py-0 ${linkStyle(
+              "/about"
+            )}`}
             to="/about"
           >
             About
@@ -86,7 +101,9 @@ const Header = () => {
         </li>
         <li className="mt-4 lg:mt-0 lg:ml-auto">
           <NavLink
-            className="block lg:inline-block py-2 px-6 border border-[#EC1D1E]  hover:bg-[#EC1D1E] hover:text-white text-sm font-bold rounded-xl"
+            className={`block lg:inline-block py-2 px-6 border border-[#EC1D1E] hover:bg-[#EC1D1E] hover:text-white  text-sm font-bold rounded-xl ${linkStyle(
+              "/signup"
+            )}`}
             to="/signup"
           >
             Sign Up
@@ -94,7 +111,9 @@ const Header = () => {
         </li>
         <li className="mt-4 lg:mt-0">
           <NavLink
-            className="block lg:inline-block border border-[#EC1D1E] py-2 px-6 hover:bg-[#EC1D1E] hover:text-white text-sm font-bold rounded-xl"
+            className={`block lg:inline-block py-2 px-6 border border-[#EC1D1E] hover:bg-[#EC1D1E] hover:text-white  text-sm font-bold rounded-xl ${linkStyle(
+              "/login"
+            )}`}
             to="/login"
           >
             Log In

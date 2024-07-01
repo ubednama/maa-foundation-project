@@ -21,12 +21,13 @@ function Footer() {
           </div>
 
           {/* Second Div */}
-          <div className="p-10 ml-20">
-            <h2 className="text-2xl font-bold mb-4">Quick Links</h2>
+          <div className="p-10 ml-10">
+            {/* <h2 className="text-2xl font-bold mb-4">Quick Links</h2> */}
             <div className="grid grid-cols-2 gap-4">
               {/* Inner Div 1 */}
               <div>
-                <ul className="space-y-2">
+              <ul className="space-y-2">.
+              <h2 className="text-2xl font-bold mb-4">Quick Links</h2>
                   <li>
                     <NavLink to="#" className={"hover:text-[#EC1D1E] hover:underline"}>
                       Objective
@@ -46,7 +47,8 @@ function Footer() {
               </div>
               {/* Inner Div 2 */}
               <div>
-                <ul className="space-y-2">
+              <ul className="space-y-2 px-8 mt-6">
+              <h2 className="text-2xl font-bold mb-4">Shortcuts</h2>
                   <li>
                     <NavLink to="/blog" className={"hover:text-[#EC1D1E] hover:underline"}>
                       Blogs
