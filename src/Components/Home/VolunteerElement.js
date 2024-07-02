@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-import InputText from "../Common/InputText/InputText";
 import Heading from "./Heading";
 import validator from "validator";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 
 const VolunteerElement = () => {
 
@@ -60,23 +57,26 @@ const VolunteerElement = () => {
         <div className="flex items-center sm:h-full justify-center sm:justify-end sm:mr-[5%]">
           <form className="mt-2 space-y-3 xl:space-y-5 sm:mt-10 w-[80%] sm:w-full sm:max-w-96 lg:max-w-md xl:max-w-lg"
             onSubmit={handleSubmit}>
-            <InputText
-              placeholder={"Your Name"}
-              name={"name"}
+            <input
+              className="input-field-primary"
+              placeholder="Your Name"
+              name="name"
               value={volunteerData.name}
               onChange={handleChange}
             />
-            <InputText
-              placeholder={"Your email"}
-              name={"email"}
+            <input
+              className="input-field-primary"
+              placeholder="Your email"
+              name="email"
               value={volunteerData.email}
               onChange={handleChange}
             />
             <div className="flex items-center gap-1">
-              <span className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 lg:p-4 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-400 px-3 py-2.5">+91</span>
-              <InputText
-                placeholder={"Your Number (optional)"}
-                name={"phoneNumber"}
+              <span className="input-field-primary text-sm w-fit">+91</span>
+              <input
+                className="input-field-primary"
+                placeholder="Your Number (optional)"
+                name="phoneNumber"
                 pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
                 type="tel"
                 value={volunteerData.phoneNumber}
@@ -84,32 +84,28 @@ const VolunteerElement = () => {
                 maxLength={10}
               />
             </div>
-            {/* <InputText
-              placeholder={"DOB"}
-              name={"dob"}
-              value={volunteerData.dob}
-              onChange={handleChange}
-            /> */}
-            <div className="flex items-center gap-1 w-full">
-              <span className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 lg:p-4 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-400 px-3 py-2.5 w-1/3">Date of Birth:</span>
-              <div className="w-2/3 flex items-center justify-center bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg  dark:bg-gray-700 dark:border-gray-600 dark:text-gray-400">
-                <DatePicker
-                  className="dark:border-gray-600 border-gray-300 bg-gray-100 dark:bg-gray-700 p-2.5 lg:p-4"
-                  selected={dateOfBirth}
-                  onChange={(date) => setDateOfBirth(date)}
-                />
-              </div>
+            <div className="flex items-center gap-1">
+              <span className="input-field-primary text-sm min-w-[100px] lg:min-w-[120px] w-fit">Date of Birth:</span>
+              <input
+                className="input-field-primary max-h-[2.38rem] lg:max-h-[2.88rem] min-w-[120px]"
+                type="date"
+                placeholder="DOB"
+                name="dob"
+                value={volunteerData.dob}
+                onChange={handleChange}
+              />
             </div>
 
 
-            <InputText
-              placeholder={"Your Address"}
-              name={"address"}
+            <input
+              className="input-field-primary"
+              placeholder="Your Address"
+              name="address"
               value={volunteerData.address}
               onChange={handleChange}
             />
             <textarea
-              className="w-full h-[184px] mb-5 bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-400"
+              className="input-field-primary w-full h-[184px] mb-5 text-sm"
               rows="10"
               placeholder="Why You Want to Join as Volunteer?"
               name="reason"
@@ -122,7 +118,7 @@ const VolunteerElement = () => {
                 id="link-checkbox"
                 type="checkbox"
                 value=""
-                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-700 rounded focus:ring-blue-500 focus:ring-2"
               />
               <label
                 htmlFor="link-checkbox"
@@ -132,7 +128,7 @@ const VolunteerElement = () => {
               </label>
             </div>
             <div className="flex items-center">
-              <button className="text-white  bg-[#EC1D1E] p-2 px-8 btn- rounded-md mx-auto ">
+              <button className="btn-primary mx-auto ">
                 Submit
               </button>
             </div>

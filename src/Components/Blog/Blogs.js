@@ -66,7 +66,7 @@ const Blogs = () => {
           })}
         </div>
         <div className="w-full flex justify-center h-[300px] items-center">
-          <button className="h-[50px] w-[115px] flex justify-center items-center bg-[#FF0000] text-[20px] text-white font-normal rounded-[4px]">
+          <button className="btn-primary ">
             View more
           </button>
         </div>

@@ -8,14 +8,14 @@ const Gallery = () => {
           <div>
             <p className="text-5xl font-[700] md:w-[39vw]">
               Empowering Women Our{" "}
-              <span className="text-[#EC1D1E]">Mission in Action</span>
+              <span className="text-primary-base">Mission in Action</span>
             </p>
             <p className="pt-8 text-xl md:w-[30vw]">
               Explore our journey of empowering women through impactful
               initiatives. Witness the transformation and strength in every story
               captured in our mission-driven gallery
             </p>
-            <button className="text-white bg-[#EC1D1E] text-[20px] p-[10px] rounded-md mt-11">
+            <button className="btn-primary mt-11">
               Contact Us
             </button>
           </div>

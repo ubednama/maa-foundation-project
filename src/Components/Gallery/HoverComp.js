@@ -9,4 +9,4 @@ const Hcomp = ({heading,text}) => {
   )
 }
 
-export default Hcomp 
+export default Hcomp;

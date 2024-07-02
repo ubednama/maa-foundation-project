@@ -94,21 +94,21 @@ export default function Contact() {
                 <input
                   type="email"
                   placeholder="Your Mail"
-                  className="w-full p-2 border border-black rounded text-base lg:text-xl text-neutral-400"
+                  className="input-field-primary text-base lg:text-xl"
                 />
                 <input
                   type="tel"
                   placeholder="Phone Number (optional)"
-                  className="w-full p-2 border border-black rounded text-base lg:text-xl text-neutral-400"
+                  className="input-field-primary text-base lg:text-xl "
                 />
                 <textarea
-                  placeholder="write your text"
-                  className="w-full p-2 border border-black rounded text-base lg:text-xl text-neutral-400"
+                  placeholder="Provide Feedback"
+                  className="input-field-primary text-base lg:text-xl"
                   rows="5"
                 />
               </div>
               <div className="mt-4 flex justify-start">
-                <button className="bg-red-600 text-neutral-100 text-base lg:text-lg font-medium py-2 px-6 rounded">
+                <button className="btn-primary lg:text-lg">
                   Feedback
                 </button>
               </div>
