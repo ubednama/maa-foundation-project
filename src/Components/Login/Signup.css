@@ -161,6 +161,12 @@
     border-radius: 4px;
 }
 
+.signup-btn button:hover {
+    color: #FF2020;
+    background-color: transparent;
+    outline: 2px solid #FF2020;
+}
+
 .footer-signup {
     display: flex;
     justify-content: center;
