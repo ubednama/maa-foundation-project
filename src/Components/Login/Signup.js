@@ -4,7 +4,8 @@ import "./Signup.css"
 function Signup() {
     return (
         <div className='signup'>
-            <div className='container'>
+            <div className='container-signup'>
+                <div className='reg-image'>
                 {/* <div className='reg-image'>
                     <div className='brand-logo'><img src='../Assets/maa.png' alt='' /></div>
                 </div> */}
@@ -42,8 +43,8 @@ function Signup() {
                                     <label for="notify">Notify me for all updates</label>
                                 </div>
                             </div>
-                            <div className='btn-primary w-1/2'><button>Sign Up</button></div>
-                            <div className='footer'>Already have an account | <a href="/login">login</a></div>
+                            <div className='signup-btn'><button>Sign Up</button></div>
+                            <div className='footer-signup'>Already have an account | <a href="">login</a></div>
                         </form>
                     </div>
                 </div>
