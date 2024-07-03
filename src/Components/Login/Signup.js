@@ -4,7 +4,7 @@ import "./Signup.css"
 function Signup() {
     return (
         <div className='signup'>
-            <div className='container'>
+            <div className='container-signup'>
                 <div className='reg-image'>
                     <div className='brand-logo'><img src='../Assets/maa.png' alt='' /></div>
                 </div>
@@ -43,7 +43,7 @@ function Signup() {
                                 </div>
                             </div>
                             <div className='signup-btn'><button>Sign Up</button></div>
-                            <div className='footer'>Already have an account | <a href="">login</a></div>
+                            <div className='footer-signup'>Already have an account | <a href="">login</a></div>
                         </form>
                     </div>
                 </div>
