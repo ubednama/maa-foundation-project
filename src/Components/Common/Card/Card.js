@@ -7,7 +7,7 @@ const Card = ({ imgSrc, cardTitle, cardDescription, link = "#" }) => {
       <img src={imgSrc} alt="" className="w-full h-auto" />
       <h2 className="font-semibold mt-2 leading-9 text-xl">{cardTitle}</h2>
       <p className="font-light font-lato text-lg">{cardDescription}</p>
-      <NavLink to={link} className="flex items-center mt-4 text-blue-500 hover:text-blue-700 transition duration-300">
+      <NavLink to={link} className="flex items-center mt-4 text-red-500 hover:text-red-600transition duration-300">
         <span className="font-medium">Learn more</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
-import "./Home.css";
 import Card from "../Common/Card/Card";
 import DonateElement from "./DonateElement";
 import VolunteerElement from "./VolunteerElement";
@@ -15,14 +14,14 @@ const Home = () => {
           {/* First div content */}
           <h1 className="text-lg  sm:text-4xl md:text-4xl lg:text-5xl mb-4">
             Leading the Way to Women's{" "}
-            <b className="text-[#EC1D1E] font-bold">Empowerment</b>
+            <b className="text-primary-base font-bold">Empowerment</b>
           </h1>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-4">
             Empowering women to lead with confidence and strength. Join us in
             creating a world of equality and opportunity for all women.
           </p>
-          <button className="font-lato font-medium bg-[#EC1D1E] text-white px-4 py-2 rounded-md text-sm sm:text-base md:text-lg lg:text-xl">
-            <NavLink to="/contact">Contact Us</NavLink>
+          <button className="btn-primary text-sm sm:text-base md:text-lg lg:text-xl">
+            <NavLink to="/contact" className="" >Contact Us</NavLink>
           </button>
         </div>
         <div className=" p-4 flex justify-center items-center">
@@ -45,7 +44,7 @@ const Home = () => {
           imgSrc={"assets/womenEmpowerment.png"}
           cardTitle={"Women Empowerment"}
           cardDescription={
-            "We focus on providing equal opportunities for women in the work field. We do also skill development progrramme for women."
+            "We focus on providing equal opportunities for women in the work field. We do also skill development programme for women."
           }
         />
         <Card
@@ -59,7 +58,7 @@ const Home = () => {
           imgSrc={"assets/medical.png"}
           cardTitle={"Free Medical Camp"}
           cardDescription={
-            "Providing free medical check-ups and essential healthcare services to underserved communities."
+            "Providing free medical check-ups and essential healthcare services to undeserved communities."
           }
         />
       </div>
@@ -71,7 +70,7 @@ const Home = () => {
         </div>
        
         <section
-          className="w-full h-auto md:h-[790px] lg:h-[844px] mb-10"
+          className="w-full h-auto md:h-[790px] lg:h-[844px] mb-10 flex justify-center sm:block"
           style={{
             background: `linear-gradient(89.63deg,#ffffff 39.45%,rgba(0, 0, 0, 0.62) 70.46%), 
     url('/assets/maa.png')`,
@@ -82,16 +81,14 @@ const Home = () => {
           }}
         >
           <div className="w-full max-w-sm  md:max-w-lg m-4 p-4 md:m-16">
-            <div className="w-full max-w-md  mt-6">
-              <span className="font-medium text-[#EC1D1E] text-xl sm:text-lg md:text-xl lg:text-2xl leading-8 tracking-wide block text-center">
+            <div className="w-full max-w-md mt-6">
+              <span className="font-medium text-primary-base text-xl sm:text-lg md:text-xl lg:text-2xl leading-8 tracking-wide block text-center">
                 MAA FOUNDATION
               </span>
-              <span className="font-normal font-lato text-base sm:text-sm md:text-base lg:text-lg leading-8 tracking-wide block text-center mt-4">
-                has been working in India for over 70 years, for the upliftment
-                of marginalised women and girls through 53 programmes in 18
-                states and 130+ districts.
+              <span className="font-normal font-lato text-base sm:text-sm md:text-base lg:text-lg leading-6 tracking-wide block text-center mt-4">
+                has been working in India for over 70 years, for the upliftment of marginalized women and girls through 53 programmes in 18 states and 130+ districts.
               </span>
-              <p className="mt-12 bg-gray-100 border border-gray-300 text-gray-900 text-normal rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-400">
+              <p className="input-field-primary mt-4 text-normal w-full">
                 MAA FOUNDATION PAN NUMBER : A125D4G46d
               </p>
               <div className="mt-4">

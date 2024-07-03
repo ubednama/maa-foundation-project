@@ -1,52 +1,93 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import validator from "validator";
 
 const DonateElement = () => {
+  const [donationData, setDonationData] = useState({
+    name: "",
+    email: "",
+    donationAmount: ""
+  });
+
+  const handleButtonClick = (amount) => {
+    setDonationData((prevData) => ({
+      ...prevData,
+      donationAmount: amount
+    }));
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setDonationData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // ToDo: add submit logic
+    if (donationData.email.trim() !== "" && validator.isEmail(donationData.email)) {} //ToDo: only move email when this satisfied
+    else {} //don't submit email
+    console.log("Donation Data:", donationData);
+  };
+
   return (
-    <div className="border border-gray-300 text-gray-900 text-normal  mb-7 rounded-lg">
-      <form className="m-4">
+    <div className="border border-gray-300 text-gray-900 text-normal mb-7 rounded-lg">
+      <form className="m-4" onSubmit={handleSubmit}>
         <input
           type="text"
-          className="mb-5 bg-gray-100 border border-gray-300 text-gray-500 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-400"
-          value="Your Name"
+          className="mb-4 input-field-primary text-sm w-full"
+          placeholder="Your Name"
         />
         <input
-          type="text"
-          className="mb-5 bg-gray-100 border border-gray-300 text-gray-500 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-400"
-          value="Your Mail (Optional)"
+          type="email"
+          className="mb-4 input-field-primary text-sm w-full"
+          placeholder="Your Mail (Optional)"
         />
-        <div className="w-[343px] h-[96.66px]">
-          <div className="flex">
-            <button className="w-1/3 ml-2 m-4 border-2 border-black flex justify-center items-center rounded-md">
+        <div className=" mb-4">
+          <div className="flex mb-4">
+            <button className="btn-primary !bg-white !text-black ml-2 mx-4 !border-2 !border-[#000] !rounded-md font-bold"
+              type="button"
+              onClick={() => handleButtonClick("1000")}>
               1000/-
             </button>
-            <button className="w-1/3 m-4 border-2 border-black flex justify-center items-center rounded-md">
-              15000/-
+            <button className="btn-primary !bg-white !text-black ml-2 mx-4 !border-2 !border-[#000] !rounded-md font-bold"
+              type="button"
+              onClick={() => handleButtonClick("1500")}>
+              1500/-
             </button>
-            <button className="w-1/3 m-4 border-2 border-black flex justify-center items-center rounded-md">
-              25000/-
+            <button className="btn-primary !bg-white !text-black ml-2 mx-4 !border-2 !border-[#000] !rounded-md font-bold"
+              type="button"
+              onClick={() => handleButtonClick("2500")}>
+              2500/-
             </button>
           </div>
-          <input
-            type="text"
-            className="mb-5 bg-gray-100 border border-gray-300 text-gray-500 text-sm rounded-lg block w-[232.85px] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-400"
-            value="Rs/- Enter Amount"
+          <input 
+            type="number"
+            name="donationAmount"
+            value={donationData.donationAmount}
+            onChange={handleChange}
+            className="input-field-primary text-sm !w-1/2"
+            placeholder="Rs/- Enter Amount"
           />
         </div>
-        <button className="text-white bg-[#EC1D1E] p-2 rounded-md mx-auto m-3 ">
+        <button className="btn-primary mx-auto m-3">
           <NavLink to="/donate">Donate</NavLink>
         </button>
       </form>
       {/* Start my design */}
-      <div className="container mx-auto p-4 px-0  border border-gray-300">
+      <div className="container mx-auto pt-4 px-0  border-t border-gray-300">
         <div className="grid grid-cols-3 gap-4 pb-1 ">
         {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pb-1 "> */}
-          <div className="p-4 pr-0 col-span-2  text-sm">
+          <div className="p-4 pr-0 col-span-2 text-sm">
             <h1 className="text-lg md:text-xl font-bold mb-4">Online Banking</h1>
             <p className="mb-1">Name: Maa Foundation</p>
             <p className="mb-1">Account No: 9457485678IFSC</p>
             <p className="mb-1">Code: SBIN0014321</p>
-            <p className="mb-1">or</p>
+            <div className="flex items-center mb-1">
+              <p className="mr-1 font-bold">OR</p>
+            </div>
             <p className="mb-1">maafoundation@upi</p>
           </div>
           <div className="p-4 flex flex-col items-center border-l col-span-1">

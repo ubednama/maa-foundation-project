@@ -2,7 +2,7 @@
     display: flex;
     width: 100%;
     position: relative;
-    background: url("../Components/background.jpg");
+    background: url("./background.jpg");
     background-size: cover;
 }
 
@@ -100,26 +100,13 @@
     flex-direction: column;
 }
 
-.input-name input,
-.other-details input {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 30px;
-    padding: 14px 18px;
-    border: 2px solid black;
-    border-radius: 4px;
-}
-
 .checkboxes {
     display: flex;
     width: 28px;
     height: 28px;
-    background-color: white;
-    border-radius: 6px;
     vertical-align: middle;
-    border: 2px solid black;
-    appearance: none;
     -webkit-appearance: none;
+    appearance: none;
     outline: none;
     cursor: pointer;
 }
@@ -147,6 +134,7 @@
     justify-content: center;
     margin: 50px 0px;
 }
+
 
 .signup-btn button {
     color: white;

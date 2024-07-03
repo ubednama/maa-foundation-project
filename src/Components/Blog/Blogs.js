@@ -51,7 +51,7 @@ const Blogs = () => {
       </div>
 
       <div className="bg-[#ffdede59] pt-5 md:pt-10 lg:pt-20">
-        <div className="card-container w-full h-auto flex flex-wrap justify-center gap-[30px]">
+        <div className="card-container w-full h-auto flex flex-wrap justify-center gap-[45px]">
           {blogsData.map((item) => {
             return (
               <BlogsCard
@@ -66,7 +66,7 @@ const Blogs = () => {
           })}
         </div>
         <div className="w-full flex justify-center h-[300px] items-center">
-          <button className="h-[50px] w-[115px] flex justify-center items-center bg-[#FF0000] text-[20px] text-white font-normal rounded-[4px]">
+          <button className="btn-primary ">
             View more
           </button>
         </div>
