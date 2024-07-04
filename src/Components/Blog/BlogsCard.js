@@ -8,10 +8,10 @@ const BlogsCard = ({ id, coverImage, authorImage, title, author, date }) => {
   return (
     <>
       <Link onClick={() => scrollToTop()} to={`/blogdata/${id}`}>
-        <div className="card gap-[32px] flex flex-col justify-between w-[378.3px] h-auto p-[8px] bg-[white] rounded-lg">
+        <div className="card gap-[32px] flex flex-col justify-between w-[378.3px] h-auto p-[10px] bg-[white] rounded-lg">
           <div className="flex flex-col gap-[6px]">
             <div className="h-[240px] w-[360px] overflow-hidden rounded-lg object-fill">
-              <img className="h-[240px] w-[360px]" src={coverImage} alt="" />
+              <img className="h-[240px] w-[358px]" src={coverImage} alt="" />
             </div>
             <div className="text-[24px] font-semibold">{title}</div>
           </div>

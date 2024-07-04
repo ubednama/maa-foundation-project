@@ -51,7 +51,7 @@ const Blogs = () => {
       </div>
 
       <div className="bg-[#ffdede59] pt-5 md:pt-10 lg:pt-20">
-        <div className="card-container w-full h-auto flex flex-wrap justify-center gap-[30px]">
+        <div className="card-container w-full h-auto flex flex-wrap justify-center gap-[45px]">
           {blogsData.map((item) => {
             return (
               <BlogsCard
