@@ -1,9 +1,10 @@
 // this is a constant file which is used to pass dummy data for now. this data should be taken from backend
 
-const Image1 = "/Images/Rectangle 43.jpg";
-const Image2 = "/Images/Rectangle 44.jpg";
-const Image3 = "/Images/Rectangle 46.jpg";
-const Image4 = "/Images/Rectangle 47.jpg";
+const Image1 = "/Images/img1.jpg";
+const Image2 = "/Images/img3.png";
+const Image3 = "/Images/img1.jpg";
+const Image4 = "/Images/img3.png";
+
 
 export const events = [
   {
