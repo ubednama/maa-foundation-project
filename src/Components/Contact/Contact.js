@@ -1,9 +1,7 @@
-import React from "react";
-
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="container mx-auto p-4">
+    <div className="bg-white">
+      <div className="mx-auto p-4">
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row justify-between mx-4 lg:mx-28">
           <div className="flex flex-col justify-center items-center lg:items-start w-full lg:w-1/2 mb-8 lg:mb-0">
@@ -27,7 +25,7 @@ export default function Contact() {
           <div className="w-full lg:w-1/2 flex justify-center items-center">
             <img
               className="w-full max-w-xs lg:max-w-full h-auto object-cover"
-              src="./contact/MapIMG.jpg"
+              src="/Contact/MapImg.jpg"
               alt="Maa Foundation"
             />
           </div>
@@ -51,7 +49,7 @@ export default function Contact() {
                 <div className="flex ">
                   <div className="w-7 h-6">
                     <img
-                      src="./contact/lets-icons_message-light.jpg"
+                      src="/Contact/lets-icons_message-light.jpg"
                       alt="Email Icon"
                     />
                   </div>
@@ -62,7 +60,7 @@ export default function Contact() {
                 <div className="flex items-center">
                   <div className="w-6 h-6">
                     <img
-                      src="./contact/solar_phone-linear.jpg"
+                      src="/Contact/solar_phone-linear.jpg"
                       alt="Phone Icon"
                     />
                   </div>
@@ -73,7 +71,7 @@ export default function Contact() {
                 <div className="flex items-center">
                   <div className="w-6 h-6">
                     <img
-                      src="./contact/basil_location-outline.jpg"
+                      src="/Contact/basil_location-outline.jpg"
                       alt="Location Icon"
                     />
                   </div>
@@ -104,13 +102,11 @@ export default function Contact() {
                 <textarea
                   placeholder="Provide Feedback"
                   className="input-field-primary text-base lg:text-xl"
-                  rows="5"
+                  rows="4"
                 />
               </div>
               <div className="mt-4 flex justify-start">
-                <button className="btn-primary lg:text-lg">
-                  Feedback
-                </button>
+                <button className="btn-primary lg:text-lg">Feedback</button>
               </div>
             </form>
           </div>
@@ -122,10 +118,6 @@ export default function Contact() {
             title="Map"
             width="100%"
             height="600"
-            frameborder="0"
-            scrolling="no"
-            marginheight="0"
-            marginwidth="0"
             src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=delhi+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
           >
             <a href="https://www.gps.ie/">gps devices</a>
