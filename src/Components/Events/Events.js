@@ -11,14 +11,17 @@ const Events = () => {
     // main div
     <div className="flex flex-col gap-20 xl:gap-52 justify-center items-center ">
       {/* hero section */}
+
       <div className="w-11/12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
           <div className="p-4 flex gap-7 flex-col justify-center items-center md:items-start">
             {/* First div content */}
-            <h1 className="text-lg  sm:text-4xl md:text-4xl lg:text-5xl mb-4 font-bold">
+            <div className="text-neutral-950 text-3xl lg:text-5xl font-bold leading-tight lg:leading-10 text-center lg:text-left">
               Transformative Programs for a{" "}
-              <b className="text-primary-base font-bold">Brighter Future</b>
-            </h1>
+              <span className="text-red-600 ml-2 lg:ml-0 mt-4 leading-relaxed">
+                Brighter Future
+              </span>
+            </div>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-4">
               Empowering Women Celebrating Strength and Independence - Explore
               Our Transformative Programs Driving Women's Rights, Education, and
@@ -40,17 +43,19 @@ const Events = () => {
       </div>
 
       {/* event list */}
-      {events.map((data, index) => (
-        <EventCard
-          key={index}
-          image={data.image}
-          title={data.title}
-          subtitle={data.subtitle}
-          path={data.path}
-          id={data.id}
-          index={index}
-        ></EventCard>
-      ))}
+      <div className="mb-48 flex flex-col gap-40"> 
+        {events.map((data, index) => (
+          <EventCard
+            key={index}
+            image={data.image}
+            title={data.title}
+            subtitle={data.subtitle}
+            path={data.path}
+            id={data.id}
+            index={index}
+          ></EventCard>
+        ))}
+      </div>
     </div>
   );
 };
