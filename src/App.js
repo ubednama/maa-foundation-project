@@ -11,14 +11,18 @@ import Login from './Components/Login/Login';
 import Contact from './Components/Contact/Contact';
 import EventDetail from "./Components/Events/EventDetail";
 import Signup from './Components/Login/Signup';
+import Payment from './Components/Home/Payment';
 
 
 function App() {
   return (
     <>
-   <Header />
+    <div className='flex top-0 sticky  shadow-custom z-20'><Header /></div>
+   
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/payment" element={<Payment/>}/>
+          
           <Route path="/event" element={<Events />} />
           <Route path="/event-detail/:eventid" element={<EventDetail/>} />
           <Route path="/gallery" element={<Gallery />} />

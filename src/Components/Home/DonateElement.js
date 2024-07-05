@@ -47,7 +47,7 @@ const DonateElement = () => {
         />
         <div className=" mb-4">
           <div className="flex mb-4">
-            <button className="btn-primary !bg-white !text-black ml-2 mx-4 !border-2 !border-[#000] !rounded-md font-bold"
+            <button className="btn-primary !bg-white !text-black mr-4 !border-2 !border-[#000] !rounded-md font-bold"
               type="button"
               onClick={() => handleButtonClick("1000")}>
               1000/-
@@ -72,9 +72,10 @@ const DonateElement = () => {
             placeholder="Rs/- Enter Amount"
           />
         </div>
-        <button className="btn-primary mx-auto m-3">
-          <NavLink to="/donate">Donate</NavLink>
-        </button>
+
+        <NavLink to="/payment">
+        <button className="btn-primary mx-auto m-3">Donate</button></NavLink>
+        
       </form>
       {/* Start my design */}
       <div className="container mx-auto pt-4 px-0  border-t border-gray-300">
