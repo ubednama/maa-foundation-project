@@ -63,19 +63,6 @@ const BlogOpenPage = () => {
 
       <div className="flex flex-col h-auto w-full justify-center gap-10 items-center">
 
-        {/* {blogsData.map((item) => {
-          return (
-            <BlogsOpenPageCard
-              id={item.id}
-              coverImage={item.coverImage}
-              authorImage={item.authorImage}
-              title={item.title}
-              sample_data={item.sample_data}
-              author={item.author}
-              date={item.date}
-            />
-          );
-        })} */}
         {nextBlogs.map((item) => {
           return (
             <BlogsOpenPageCard
