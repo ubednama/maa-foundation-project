@@ -9,6 +9,9 @@ const BlogOpenPage = () => {
     window.scrollTo(0, 0);
   }
   const { blogdataId } = useParams();
+  const currentIndex = blogsData.findIndex((item) => item.id === blogdataId);
+  const nextBlogs = blogsData.slice(currentIndex + 1, currentIndex + 6);
+
   const coverImage = blogsData[blogdataId - 1].coverImage;
   const title = blogsData[blogdataId - 1].title;
   const author = blogsData[blogdataId - 1].author;
@@ -58,11 +61,11 @@ const BlogOpenPage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col h-[730px] overflow-y-scroll w-full justify-center gap-3 items-center">
+      <div className="flex flex-col h-auto w-full justify-center gap-10 items-center">
 
-      {blogsData.map((item) => {
+        {/* {blogsData.map((item) => {
           return (
-              <BlogsOpenPageCard
+            <BlogsOpenPageCard
               id={item.id}
               coverImage={item.coverImage}
               authorImage={item.authorImage}
@@ -70,10 +73,24 @@ const BlogOpenPage = () => {
               sample_data={item.sample_data}
               author={item.author}
               date={item.date}
-              />
-              );
-              })}
-            </div>
+            />
+          );
+        })} */}
+        {nextBlogs.map((item) => {
+          return (
+            <BlogsOpenPageCard
+              key={item.id}
+              id={item.id}
+              coverImage={item.coverImage}
+              authorImage={item.authorImage}
+              title={item.title}
+              sample_data={item.sample_data}
+              author={item.author}
+              date={item.date}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };
