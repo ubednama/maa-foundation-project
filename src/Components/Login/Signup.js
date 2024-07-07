@@ -29,14 +29,13 @@ function Signup() {
                     </div>
 
                     <div className="flex w-5/6 mt-6 space-x-10 text-xl">
-                        <div class="flex  mt-3 mb-3">
-                            <input type="checkbox" id="male" value="" class="w-7 h-7" />
-                            <label for="male" class="ms-2 text-xl text-gray-600 dark:text-gray-900">Male</label>
+                       <div class="flex items-center">
+                            <input id="bordered-radio-1" type="radio" value="" name="bordered-radio" class="w-7 h-7" />
+                            <label for="bordered-radio-1" class="w-full py-4 ms-2 text-xl">Male</label>
                         </div>
-
-                        <div class="flex  mt-3 mb-3">
-                            <input type="checkbox" id="female" value="" class="w-7 h-7" />
-                            <label for="female" class="ms-2 text-xl text-gray-600 dark:text-gray-900">Female</label>
+                        <div class="flex items-center">
+                            <input checked id="bordered-radio-2" type="radio" value="" name="bordered-radio" class="w-7 h-7" />
+                            <label for="bordered-radio-2" class="w-full py-4 ms-2 text-xl">Female</label>
                         </div>
                     </div>
 
