@@ -3,7 +3,7 @@ import React from 'react'
 function Signup() {
     return (
         <div className="flex flex-col md:flex-row min-h-screen justify-end relative bg-cover bg-center mb-2" style={{
-            backgroundImage: "url('/Images/background.jpg')",
+            backgroundImage: "url('/images/background.jpg')",
         }}>
             <div className='w-full' style={{
                 background:
