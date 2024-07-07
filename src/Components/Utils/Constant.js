@@ -5,6 +5,7 @@ const Image2 = "/Images/Rectangle 44.jpg";
 const Image3 = "/Images/Rectangle 46.jpg";
 const Image4 = "/Images/Rectangle 47.jpg";
 
+
 export const events = [
   {
     id:1,

@@ -6,9 +6,9 @@ const Gallery = () => {
       <div className="m-[8.5vw]">       
         <section className="flex flex-wrap justify-between">
           <div>
-            <p className="text-5xl font-[700] md:w-[39vw]">
-              Empowering Women Our{" "}
-              <span className="text-primary-base">Mission in Action</span>
+            <p className="text-5xl font-[700] md:w-[39vw] md:mt-24 flex flex-col gap-2">
+              <p>Empowering Women Our{" "}</p>
+              <span className="text-[#EC1D1E]">Mission in Action</span>
             </p>
             <p className="pt-8 text-xl md:w-[30vw]">
               Explore our journey of empowering women through impactful

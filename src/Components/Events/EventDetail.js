@@ -13,20 +13,20 @@ const EventDetail = () => {
   const otherEvents = events.filter((e) => e.id !== parseInt(eventid)); 
 
   return (
-    <div className="w-full flex justify-center items-center bg-[#fffafa]">
+    <div className="w-full flex justify-center items-center bg-[#fffafa] rounded">
       <div className="bg-[#fffafa] overflow-hidden flex flex-col items-start justify-start gap-[20px] sm:gap-[20px]">
-        <section className="self-stretch flex flex-col items-center justify-start gap-[50.5px] ">
+        <section className="self-stretch flex flex-col items-center justify-start gap-[50.5px] border-none rounded-none ">
           <img
-            className="w-full h-full"
+            className="w-full h-full rounded-none bg-cover"
             loading="lazy"
             alt=""
             src={event.image}
           />
         </section>
         
-        <section className="w-[1413px] flex flex-row items-start justify-center pt-0 px-5 pb-[157px] box-border max-w-full text-left text-3xl text-[#0a0a0a] font-lato">
+        <section className="w-[1413px] flex flex-row items-start justify-center pt-[30px] px-5 pb-[157px] box-border max-w-full text-left text-3xl text-[#0a0a0a] font-lato">
           <div className="w-[1173px] flex flex-col items-start justify-start gap-[20px] max-w-full">
-            <h1 className="text-5xl font-semibold">{event.title}</h1>
+            <h1 className="text-5xl font-semibold leading-[71.5px]">{event.title}</h1>
             <div className="relative font-normal text-[#666666] text-2xl font-lato">
               <p className="m-0">{event.subtitle} </p>
               <p className="m-0 whitespace-pre-wrap">{event.subtitle}</p>
@@ -35,7 +35,7 @@ const EventDetail = () => {
             </div>
           </div>
         </section>
-        <section className="w-11/12  flex flex-col items-center justify-start gap-[46px] shrink-0 self-center max-w-full text-left pt-0 px-5 pb-[157px]">
+        <section className="w-11/12  flex flex-col items-center justify-start gap-[20px] shrink-0 self-center max-w-full text-left pt-0 px-5 pb-[157px]">
           {otherEvents.map((event) => (
             <EventDetailCard key={event.id} data={event} />
           ))}
