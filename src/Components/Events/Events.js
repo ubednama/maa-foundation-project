@@ -12,7 +12,7 @@ const Events = () => {
     <div className="flex flex-col gap-20 xl:gap-52 justify-center items-center ">
       {/* hero section */}
 
-      <div className="w-11/12">
+      <div className="w-[1350px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
           <div className="p-4 flex gap-7 flex-col justify-center items-center md:items-start">
             {/* First div content */}
