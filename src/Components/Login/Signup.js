@@ -84,7 +84,7 @@ function Signup() {
                     <div className="mt-4 mb-2 text-center">
                         <p className="text-gray-400 text-xl">
                             Already have an account |{" "}
-                            <a className="text-xl text-primary-base" href="/signup" >login</a>
+                            <a className="text-xl text-primary-base" href="/login" >login</a>
                         </p>
                     </div>
                 </div>
