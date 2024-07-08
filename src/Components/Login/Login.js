@@ -19,7 +19,7 @@ const Login = () => {
         />
       </div>
 
-      <div className="w-full md:w-1/2 bg-white bg-opacity-90 md:bg-opacity-100 z-20 flex flex-col items-center justify-start p-4 md:p-8 overflow-y-auto min-h-screen ">
+      <div className="w-full  md:w-1/2 bg-white bg-opacity-90 md:bg-opacity-100 z-20 flex flex-col items-center justify-start  p-4 md:p-8 overflow-y-auto min-h-screen ">
         
         
         <div className="mt-6 md:mt-8 text-center">
@@ -28,7 +28,7 @@ const Login = () => {
           </p>
         </div>
         
-        <div className="w-full max-w-xs sm:max-w-sm mt-6 space-y-4">
+        <div className="w-full max-w-xs sm:max-w-sm mt-6 space-y-11">
           <input
             placeholder="Email"
             className="input-field-primary"
@@ -40,7 +40,7 @@ const Login = () => {
           />
         </div>
         
-        <div className="mt-6 w-full max-w-xs sm:max-w-sm flex justify-center">
+        <div className="mt-12 w-full max-w-xs sm:max-w-sm flex justify-center">
           <button className="btn-primary w-1/2 md:w-2/3 lg:w-1/2 text-base sm:text-lg md:text-xl">
             Log In
           </button>
