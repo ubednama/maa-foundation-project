@@ -9,7 +9,7 @@ const About = () => {
     >
       <div className=' relative top-[38px] md:w-[380px] lg:w-[480px]  xl:w-[600px]' >
 
-        <h1 className="font-Open Sans lg:text-[40px] xl:text-[52px] text-[#FA4040] font-semibold"  >Maa Foundation</h1>
+        <h1 className="lg:text-[40px] xl:text-[52px] text-[#FA4040] font-semibold"  >Maa Foundation</h1>
       
         <p className=' lg:text-[15px] xl:text-[21px] mt-8 text-start ' >
 
@@ -38,7 +38,7 @@ const About = () => {
           
           <div className=' h-screen w-full flex flex-col items-center space-y-[35px] max-[540px]:space-y-[30px] ' >
             
-          <h1 className=" max-[540px]:mt-4 max-[540px]:text-[43px]   mt-5  font-Open Sans text-[50px] text-[#FA4040] max-[391px]:text-[30px] font-semibold"  >Maa Foundation</h1>
+          <h1 className=" max-[540px]:mt-4 max-[540px]:text-[43px]   mt-5 text-[50px] text-[#FA4040] max-[391px]:text-[30px] font-semibold"  >Maa Foundation</h1>
 
           <img className=' h-[30%] w-[83%] ' src='/images/img1.jpg' alt='img' />
 
@@ -67,7 +67,7 @@ const About = () => {
       <div dir="ltr" className='  relative top-[38px] h-auto lg:w-[660px] xl:w-[840px]' >
 
 
-        <h1 className=" text-right font-Open Sans lg:text-[40px] xl:text-[52px] text-[#FA4040] font-semibold"  >Founder & President</h1>
+        <h1 className=" text-right lg:text-[40px] xl:text-[52px] text-[#FA4040] font-semibold"  >Founder & President</h1>
        
         <p className=' lg:text-[15px] xl:text-[21px] mt-8 text-start ' >
 
@@ -93,7 +93,7 @@ const About = () => {
           
           <div className=' flex flex-col items-center space-y-[31px] ' >
             
-          <h1 className=" font-Open Sans max-[540px]:text-[43px] max-[400px]:text-[30px] max-[376px]:text-[27px]  text-[50px] text-[#FA4040] font-semibold"  >Founder & President</h1>
+          <h1 className=" max-[540px]:text-[43px] max-[400px]:text-[30px] max-[376px]:text-[27px]  text-[50px] text-[#FA4040] font-semibold"  >Founder & President</h1>
 
           <img className=' h-[40%] w-[60%] ' src='/images/img2.jpg' alt='img' />
 

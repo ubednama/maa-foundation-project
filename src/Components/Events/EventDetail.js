@@ -24,10 +24,10 @@ const EventDetail = () => {
           />
         </section>
         
-        <section className="w-[1413px] flex flex-row items-start justify-center pt-[30px] px-5 pb-[157px] box-border max-w-full text-left text-3xl text-[#0a0a0a] font-lato">
+        <section className="w-[1413px] flex flex-row items-start justify-center pt-[30px] px-5 pb-[157px] box-border max-w-full text-left text-3xl text-[#0a0a0a] ">
           <div className="w-[1173px] flex flex-col items-start justify-start gap-[20px] max-w-full">
             <h1 className="text-5xl font-semibold leading-[71.5px]">{event.title}</h1>
-            <div className="relative font-normal text-[#666666] text-2xl font-lato">
+            <div className="relative font-normal text-[#666666] text-2xl">
               <p className="m-0">{event.subtitle} </p>
               <p className="m-0 whitespace-pre-wrap">{event.subtitle}</p>
               <p className="m-0">{event.subtitle}</p>

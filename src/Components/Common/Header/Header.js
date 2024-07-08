@@ -6,7 +6,7 @@ const Header = () => {
   const location = useLocation();
 
   const linkStyle = (path) =>
-    location.pathname === path ? "text-red-600":"text-black-500";
+    location.pathname === path ? "text-red-600 underline":"text-black-500";
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -15,11 +15,11 @@ const Header = () => {
   };
 
   return (
-    <nav  className="relative py-4 flex justify-between items-center bg-white w-full">
+    <nav  className="relative py-4 flex justify-between items-center bg-white w-full mx-20 pb-8">
       <NavLink className={`text-3xl font-bold leading-none`} to="/">
         <img
           alt="maa-logo"
-          className="h-10 ml-10 mt-3"
+          className="h-14"
           src="/assets/maa-logo.png"
         />
       </NavLink>
@@ -49,64 +49,29 @@ const Header = () => {
           isOpen ? "block" : "hidden"
         } absolute lg:relative top-16 lg:top-auto left-0 lg:left-auto w-full lg:w-auto bg-white lg:bg-transparent p-4 lg:p-0`}
       >
-        <li>
-          <Link  smooth={true} duration={500}
-            className={`block lg:inline-block text-xl hover:text-primary-base font-semibold hover:underline py-2 lg:py-0 lg:mr-8 ${linkStyle(
-              "/"
-            )}`}
-            to="header"
-          >
-            <NavLink  to="/">Home</NavLink>
-          </Link>
-        </li>
-
-
-        <li>
-          <Link smooth={true} duration={500}
-            className={`block lg:inline-block text-xl hover:text-primary-base font-semibold hover:underline py-2 lg:py-0 lg:mr-8 ${linkStyle(
-              "/event"
-            )}`}
-            to="header"
-          >
-            <NavLink  to="/event">Event</NavLink>
-          </Link>
-        </li>
-        <li>
-          <Link smooth={true} duration={500}
-            className={`block lg:inline-block text-xl hover:text-primary-base font-semibold hover:underline py-2 lg:py-0 lg:mr-8 ${linkStyle(
-              "/gallery"
-            )}`}
-            to="header"
-          >
-            <NavLink  to="/gallery">Gallery</NavLink>
-          </Link>
-        </li>
-
-        <li>
-          <Link smooth={true} duration={500}
-            className={`block lg:inline-block text-xl hover:text-primary-base font-semibold hover:underline py-2 lg:py-0 lg:mr-8 ${linkStyle(
-              "/blog"
-            )}`}
-            to="header"
-          >
-            <NavLink  to="/blog">Blog</NavLink>
-          </Link>
-        </li>
-        <li>
-          <Link smooth={true} duration={500}
-            className={`block lg:inline-block text-xl hover:text-primary-base font-semibold hover:underline py-2 lg:py-0 lg:mr-20 ${linkStyle(
-              "/about"
-            )}`}
-            to="header"
-          >
-            <NavLink  to="/about">About</NavLink>
-          </Link>
-        </li>
-        <li className="mt-4 lg:mt-0 lg:ml-auto">
+        {[
+          ["Home", "/" ],
+          ["Event", "/event", ],
+          ["Gallery", "/gallery" ],
+          ["Blog", "/blog" ],
+          [ "About", "/about" ],
+        ].map(([title, url]) => (
+          <li key={url}>
+            <Link
+              smooth={true}
+              duration={500}
+              className={`nav-link ${linkStyle(url)}`}
+              to="header"
+            >
+              <NavLink to={url}>{title}</NavLink>
+            </Link>
+          </li>
+        ))}
+        <li className="mt-4 lg:mt-0">
           <NavLink
-            className={`block lg:inline-block py-2 px-6 border bg-primary-base hover:bg-primary-dark text-white  text-sm font-bold rounded-xl ${linkStyle(
+            className={`block lg:inline-block py-2 px-6 border border-primary-base  bg-primary-base hover:bg-primary-dark text-white  text-sm font-bold rounded-xl ${linkStyle(
               "/signup"
-            )}`}
+            )} no-underline`}
             to="/signup"
           >
             Sign Up
@@ -116,7 +81,7 @@ const Header = () => {
           <NavLink
             className={`block lg:inline-block py-2 px-6 border border-primary-base hover:bg-primary-base hover:text-white  text-sm font-bold rounded-xl ${linkStyle(
               "/login"
-            )}`}
+            )} no-underline`}
             to="/login"
           >
             Log In

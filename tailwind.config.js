@@ -11,15 +11,20 @@ module.exports = {
       colors: {
         'primary-base': '#FF2020',
         'primary-light': '#FF6868',
-        'primary-dark': '#6B0303'
+        'primary-dark': '#6B0303',
+        'secondary': '#FFDEDE'
 
       },
       boxShadow: {
         'custom': '0 4px 8px rgba(0, 0, 0, 0.1)', 
       },
     },
+    fontFamily: {
+      sans: ['Lato', 'sans-serif']
+    },
   },
   plugins: [
+    require("@tailwindcss/forms"),
     plugin(function ({ addComponents }) {
       addComponents({
         '.btn-primary': {
@@ -27,7 +32,16 @@ module.exports = {
         },
         '.input-field-primary': {
           '@apply text-gray-500 text-sm border border-gray-700 rounded-md px-2 lg:px-4 py-2 w-full lg:py-3': {},
-        }
+        },
+        '.nav-link': {
+          '@apply block lg:inline-block text-xl hover:text-primary-base hover:underline underline-offset-8 py-2 lg:py-0 lg:mr-8 decoration-2': {},
+        },
+        '.heading': {
+          '@apply text-lg sm:text-4xl lg:text-5xl': {},
+        },
+        '.main-heading': {
+          '@apply text-primary-base': {},
+        },
       });
     }),
   ]

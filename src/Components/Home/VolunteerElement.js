@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Heading from "./Heading";
 import validator from "validator";
 
 const VolunteerElement = () => {
@@ -43,7 +42,10 @@ const VolunteerElement = () => {
   return (
     <div className="">
       <div className="flex justify-center items-center">
-        <Heading fHeading="Become a" sHeading="Volunteer" />
+        <h1 className="heading leading-snug">
+          <span className="">Become a </span>
+          <span className="main-heading">Volunteer</span>
+        </h1>
       </div>
       <section
         className="volunteer w-full h-[882px] bg-cover bg-center bg-no-repeat mt-2 md:mt-10 "
@@ -54,8 +56,8 @@ const VolunteerElement = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="flex items-center sm:h-full justify-center sm:justify-end sm:mr-[5%]">
-          <form className="mt-2 space-y-3 xl:space-y-5 sm:mt-10 w-[80%] sm:w-full sm:max-w-96 lg:max-w-md xl:max-w-lg"
+        <div className="flex items-center sm:h-full justify-center sm:justify-end sm:mr-[5%] lg:mr-32">
+          <form className="mt-2 space-y-3 xl:space-y-6 sm:mt-10 w-[80%] sm:w-full sm:max-w-96 lg:max-w-md xl:max-w-lg"
             onSubmit={handleSubmit}>
             <input
               className="input-field-primary"
@@ -113,16 +115,16 @@ const VolunteerElement = () => {
               onChange={handleChange}
             />
 
-            <div className="flex items-center">
+            <div className="flex items-center checkbox">
               <input
                 id="link-checkbox"
                 type="checkbox"
                 value=""
-                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-700 rounded focus:ring-blue-500 focus:ring-2"
+                className="size-6 bg-white ring-2 rounded-md focus:ring-gray-700 focus:ring-2 checked:bg-green-600 hover:bg-green-600 border-2 border-black"
               />
               <label
                 htmlFor="link-checkbox"
-                className="ms-2 text-bold font-medium text-gray-900 dark:text-gray-300"
+                className="ms-2 text-bold font-medium !text-black"
               >
                 Agree to the terms and conditions.
               </label>

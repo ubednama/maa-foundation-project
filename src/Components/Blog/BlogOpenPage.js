@@ -19,7 +19,7 @@ const BlogOpenPage = () => {
   const date = blogsData[blogdataId - 1].date;
   const data = blogsData[blogdataId - 1].data;
   return (
-    <div className=" bg-[#ffdede2c]">
+    <div className=" bg-secondary">
       <div className="w-full h-auto">
         <img className="w-full" src={coverImage} alt="" />
       </div>

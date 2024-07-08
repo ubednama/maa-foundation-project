@@ -22,14 +22,14 @@ const Blogs = () => {
     <p className="font-[600] text-[20px] sm:text-[24px] lg:text-[27px] text-red-600 mb-1 sm:mb-2 lg:mb-4">
       Voice of Empowerment
     </p>
-    <p className="font-[400] font-itim text-[16px] sm:text-[20px] lg:text-[28px] text-black leading-normal mb-1 sm:mb-2 lg:mb-4">
+    <p className="font-[400] text-[16px] sm:text-[20px] lg:text-[28px] text-black leading-normal mb-1 sm:mb-2 lg:mb-4">
       Amplifying Women's Strength and Influence
     </p>
       </div>
         
       </div>
 
-      <div className="bg-[#ffdede59] pt-5 md:pt-10 lg:pt-20">
+      <div className="bg-secondary pt-5 md:pt-10 lg:pt-20">
         <div className="card-container w-full h-auto flex flex-wrap justify-center gap-[45px]">
           {blogsData.map((item) => {
             return (

@@ -12,7 +12,7 @@ function Signup() {
                 <div className='w-full'></div>
                 <div className="float-right bg-white bg-opacity-100 md:bg-opacity-0 w-full md:w-1/2 z-20 flex  flex-col items-center justify-start  overflow-y-auto min-h-screen">
                     <div className="text-center max-w-md w-full mt-16 md:mt-6">
-                        <h1 className="my-5 font-sans text-4xl font-semibold text-primary-base ">
+                        <h1 className="my-5 text-4xl font-semibold text-primary-base ">
                             Registration
                         </h1>
                     </div>
