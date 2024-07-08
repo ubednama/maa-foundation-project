@@ -10,7 +10,7 @@ function Signup() {
                     "linear-gradient(120deg, transparent 15%, white 50%)",
             }}>
                 <div className='w-full'></div>
-                <div className="float-right mr-10 w-full md:w-1/2 z-20 flex  flex-col items-center justify-start  overflow-y-auto min-h-screen">
+                <div className="float-right w-full md:w-1/2 z-20 flex  flex-col items-center justify-start  overflow-y-auto min-h-screen">
                     <div className="text-center max-w-md w-full mt-16 md:mt-6">
                         <h1 className="my-5 font-sans text-5xl font-semibold text-primary-base ">
                             Registration
@@ -84,7 +84,7 @@ function Signup() {
                     <div className="mt-4 mb-2 text-center">
                         <p className="text-gray-400 text-xl">
                             Already have an account |{" "}
-                            <a className="text-xl text-primary-base" href="/signup" >login</a>
+                            <a className="text-xl text-primary-base" href="/login" >login</a>
                         </p>
                     </div>
                 </div>
