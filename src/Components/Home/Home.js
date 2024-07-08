@@ -9,8 +9,9 @@ import Heading from "./Heading";
 const Home = () => {
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
-        <div className="p-4 flex flex-col justify-center items-center md:items-start">
+      <div className="grid grid-cols-1 md:grid-cols-2 mx-[120px] mt-6">
+        <div className=" flex flex-col justify-center items-center md:items-start">
+
           {/* First div content */}
           <h1 className="text-lg  sm:text-4xl md:text-4xl lg:text-5xl mb-4">
             Leading the Way to Women's{" "}
@@ -24,7 +25,7 @@ const Home = () => {
             <NavLink to="/contact" className="" >Contact Us</NavLink>
           </button>
         </div>
-        <div className=" p-4 flex justify-center items-center">
+        <div className=" flex justify-center items-center">
           {/* Second div content with image */}
           <img
             alt="map"
@@ -34,12 +35,12 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center items-center mb-12 text-center">
+      <div className="flex flex-col justify-center items-center mb-12 text-center"  id="objective">
         <Heading fHeading="Our" sHeading="Objective" />
       </div>
 
-      <div className="flex flex-wrap justify-center h-auto m-4 md:m-16 mb-2">
-      {/* <div className="flex flex-wrap justify-center h-auto md:h-[699.96px] m-4 md:m-16 mb-2"> */}
+      
+      <div className="flex flex-wrap justify-center h-auto m-4 md:m-16 mb-2 ">
         <Card
           imgSrc={"assets/womenEmpowerment.png"}
           cardTitle={"Women Empowerment"}
@@ -63,7 +64,12 @@ const Home = () => {
         />
       </div>
 
-      <VolunteerElement />
+
+
+
+      <div id="volunteer">
+      <VolunteerElement  />
+      </div>
       <div className="mt-32 mb-16">
         <div className="flex justify-center items-center ">
           <Heading fHeading="Become a" sHeading="Contributor" />
@@ -91,7 +97,7 @@ const Home = () => {
               <p className="input-field-primary mt-4 text-normal w-full">
                 MAA FOUNDATION PAN NUMBER : A125D4G46d
               </p>
-              <div className="mt-4">
+              <div className="mt-4" id="donateSection">
                 <DonateElement />
               </div>
             </div>

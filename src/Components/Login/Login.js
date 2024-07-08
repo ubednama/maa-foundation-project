@@ -19,19 +19,11 @@ const Login = () => {
         />
       </div>
 
-      <div className="w-full md:w-1/2 bg-white bg-opacity-90 md:bg-opacity-100 z-20 flex flex-col items-center justify-start p-4 md:p-8 overflow-y-auto min-h-screen">
-        <div className="text-center max-w-md w-full mt-16 md:mt-0">
-          <h1 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-primary-base">
-            MAA FOUNDATION
-          </h1>
-          <p className="font-work-sans text-xs sm:text-sm md:text-base text-[#160202] mt-2 md:mt-4">
-            Children are our greatest treasures, and it is our duty to nurture
-            them with love and care.
-          </p>
-        </div>
+      <div className="w-full md:w-1/2 bg-white bg-opacity-90 md:bg-opacity-100 z-20 flex flex-col items-center justify-start p-4 md:p-8 overflow-y-auto min-h-screen ">
+        
         
         <div className="mt-6 md:mt-8 text-center">
-          <p className="font-sans text-xl sm:text-2xl md:text-3xl font-semibold text-primary-base">
+          <p className="font-sans text-xl sm:text-2xl md:text-3xl font-semibold text-primary-base mb-9">
             Login
           </p>
         </div>
