@@ -17,9 +17,9 @@ const EventCard = ({ image, title, subtitle, path, index, id}) => {
     <div className={`w-full flex justify-center`}>
       {/* main div */}
       <div
-        className={`w-11/12 flex flex-col items-center gap-4 lg:gap-24 lg:flex-row ${
+        className={`flex flex-col w-full items-center gap-4 lg:gap-24 lg:flex-row ${
           index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-        } justify-center`}
+        } justify-evenly`}
       >
         {/* image div */}
         <div>

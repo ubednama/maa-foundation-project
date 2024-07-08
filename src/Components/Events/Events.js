@@ -10,10 +10,10 @@ const Events = () => {
   return (
     // main div
     <div className="flex flex-col gap-20 xl:gap-52 justify-center items-center ">
-      {/* hero section */}
-
-      <div className="w-11/12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+      {/* herosection */}
+      <div className="w-11/12 flex justify-center items-center mt-12">
+        {/* inner div */}
+        <div className="w-full flex md:flex-row flex-col-reverse  justify-between">
           <div className="p-4 flex gap-7 flex-col justify-center items-center md:items-start">
             {/* First div content */}
             <div className="text-neutral-950 text-3xl lg:text-5xl font-bold leading-tight lg:leading-10 text-center lg:text-left">
@@ -31,19 +31,20 @@ const Events = () => {
               <NavLink to="/contact">Contact Us</NavLink>
             </button>
           </div>
-          <div className=" p-4 flex justify-center items-center">
+
+          <div className="w-full flex justify-end items-center">
             {/* Second div content with image */}
             <img
               alt="map"
               src="assets/eventMap.png"
-              className="w-11/12 h-auto "
+              className="max-w-full max-h-full"
             />
           </div>
         </div>
       </div>
 
       {/* event list */}
-      <div className="mb-48 flex flex-col gap-40"> 
+      <div className="w-11/12 mb-48 flex flex-col gap-40">
         {events.map((data, index) => (
           <EventCard
             key={index}
