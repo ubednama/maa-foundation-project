@@ -101,7 +101,7 @@ export default function Contact() {
                 />
                 <textarea
                   placeholder="Provide Feedback"
-                  className="input-field-primary text-base lg:text-xl"
+                  className="input-field-primary text-base lg:text-xl w-full h-44 mb-5 resize-none rounded-md p-3"
                   rows="4"
                 />
               </div>

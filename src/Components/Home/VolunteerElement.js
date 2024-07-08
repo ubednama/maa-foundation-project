@@ -107,7 +107,7 @@ const VolunteerElement = () => {
               onChange={handleChange}
             />
             <textarea
-              className="input-field-primary w-full h-[184px] mb-5 text-sm"
+              className="input-field-primary w-full h-44 mb-5 text-sm resize-none rounded-md p-3"
               rows="10"
               placeholder="Why You Want to Join as Volunteer?"
               name="reason"
@@ -115,16 +115,16 @@ const VolunteerElement = () => {
               onChange={handleChange}
             />
 
-            <div className="flex items-center checkbox">
+            <div className="flex items-center gap-2">
               <input
                 id="link-checkbox"
                 type="checkbox"
                 value=""
-                className="size-6 bg-white ring-2 rounded-md focus:ring-gray-700 focus:ring-2 checked:bg-green-600 hover:bg-green-600 border-2 border-black"
+                className="checkbox"
               />
               <label
                 htmlFor="link-checkbox"
-                className="ms-2 text-bold font-medium !text-black"
+                className="text-bold font-medium !text-black"
               >
                 Agree to the terms and conditions.
               </label>
