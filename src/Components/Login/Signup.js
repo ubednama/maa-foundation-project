@@ -7,12 +7,12 @@ function Signup() {
         }}>
             <div className='w-full' style={{
                 background:
-                    "linear-gradient(120deg, transparent 15%, white 50%)",
+                    "linear-gradient(120deg, transparent 30%, white 50%)",
             }}>
                 <div className='w-full'></div>
                 <div className="float-right bg-white bg-opacity-100 md:bg-opacity-0 w-full md:w-1/2 z-20 flex  flex-col items-center justify-start  overflow-y-auto min-h-screen">
                     <div className="text-center max-w-md w-full mt-16 md:mt-6">
-                        <h1 className="my-5 font-sans text-5xl font-semibold text-primary-base ">
+                        <h1 className="my-5 font-sans text-4xl font-semibold text-primary-base ">
                             Registration
                         </h1>
                     </div>
@@ -31,11 +31,11 @@ function Signup() {
                     <div className="flex w-5/6 mt-6 space-x-10 text-xl">
                        <div class="flex items-center">
                             <input id="bordered-radio-1" type="radio" value="" name="bordered-radio" class="w-7 h-7" />
-                            <label for="bordered-radio-1" class="w-full py-4 ms-2 text-xl">Male</label>
+                            <label for="bordered-radio-1" class="w-full py-4 ms-2 text-base">Male</label>
                         </div>
                         <div class="flex items-center">
                             <input checked id="bordered-radio-2" type="radio" value="" name="bordered-radio" class="w-7 h-7" />
-                            <label for="bordered-radio-2" class="w-full py-4 ms-2 text-xl">Female</label>
+                            <label for="bordered-radio-2" class="w-full py-4 ms-2 text-base">Female</label>
                         </div>
                     </div>
 
@@ -65,12 +65,12 @@ function Signup() {
                     <div className="flex flex-col w-5/6 mt-6 text-xl">
                         <div class="flex  mt-3 mb-3">
                             <input type="checkbox" id="red-checkbox" value="" class="w-7 h-7 border-2 border-gray-700 text-gray-600 rounded-[6px] " />
-                            <label for="red-checkbox" class="ms-2 text-xl text-gray-600 dark:text-gray-900">Agree to the terms and conditions</label>
+                            <label for="red-checkbox" class="ms-2 text-base text-gray-600 dark:text-gray-900">Agree to the terms and conditions</label>
                         </div>
 
                         <div class="flex  mt-3 mb-3">
                             <input type="checkbox" value="" class="w-7 h-7 border-2 border-gray-700 text-gray-600 rounded-[6px] " />
-                            <label for="Male" class="ms-2 text-xl text-gray-600 dark:text-gray-900">Notify me for all updates</label>
+                            <label for="Male" class="ms-2 text-base text-gray-600 dark:text-gray-900">Notify me for all updates</label>
                         </div>
                     </div>
 
