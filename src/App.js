@@ -17,7 +17,8 @@ import Payment from './Components/Home/Payment';
 function App() {
   return (
     <>
-    <div className='flex top-0 sticky  shadow-custom z-20'><Header /></div>
+    <div  className='flex top-0 sticky  shadow-custom z-50'><Header /></div>
+    <div id='header' className=''></div>
    
         <Routes>
           <Route path="/" element={<Home />} />

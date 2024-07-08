@@ -1,4 +1,5 @@
 import React from "react";
+import {NavLink} from "react-router-dom";
 import Hcomp from "./HoverComp";
 
 const Gallery = () => {
@@ -15,9 +16,11 @@ const Gallery = () => {
               initiatives. Witness the transformation and strength in every story
               captured in our mission-driven gallery
             </p>
-            <button className="btn-primary mt-11">
-              Contact Us
-            </button>
+            
+            <NavLink to="/contact">
+              <button className="btn-primary mt-11">Contact Us</button>
+            </NavLink>
+            
           </div>
           <img className=" md:h-[44vw] hidden md:flex" src="/gallery/heroImage1.jpeg" alt="hero_image" />
         </section>
