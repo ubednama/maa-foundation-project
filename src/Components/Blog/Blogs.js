@@ -5,7 +5,7 @@ import { image } from "./blogsdata";
 
 const Blogs = () => {
   return (
-    <>
+    <div className="">
       <div className="relative">
         {/* Background Image */}
         <img
@@ -16,21 +16,21 @@ const Blogs = () => {
 
         {/* Absolute Positioned Content */}
         <div className="absolute inset-0 flex flex-col justify-center p-4 sm:pl-10 lg:pl-[10%] lg:py-[8%]">
-    <p className="font-[600] text-[32px] w-[386px] sm:text-[40px] lg:text-[55px] text-black mb-2 sm:mb-4 lg:pb-10">
-      Blogs
-    </p>
-    <p className="font-[600] text-[20px] sm:text-[24px] lg:text-[27px] text-red-600 mb-1 sm:mb-2 lg:mb-4">
-      Voice of Empowerment
-    </p>
-    <p className="font-[400] text-[16px] sm:text-[20px] lg:text-[28px] text-black leading-normal mb-1 sm:mb-2 lg:mb-4">
-      Amplifying Women's Strength and Influence
-    </p>
-      </div>
-        
+          <p className="font-bold text-4xl lg:text-5xl text-black mb-2 sm:mb-4 lg:pb-10">
+            Blogs
+          </p>
+          <p className="font-semibold text-xl lg:text-3xl text-primary-base mb-1 sm:mb-2 lg:mb-4">
+            Voice of Empowerment
+          </p>
+          <p className="text-base lg:text-2xl text-black leading-normal mb-1 sm:mb-2 lg:mb-4">
+            Amplifying Women's Strength and Influence
+          </p>
+        </div>
+
       </div>
 
-      <div className="bg-secondary pt-5 md:pt-10 lg:pt-20">
-        <div className="card-container w-full h-auto flex flex-wrap justify-center gap-[45px]">
+      <div className=" border pt-5 md:pt-10 lg:pt-20">
+        <div className="mx-20 h-auto flex flex-wrap justify-center gap-8">
           {blogsData.map((item) => {
             return (
               <BlogsCard
@@ -44,13 +44,13 @@ const Blogs = () => {
             );
           })}
         </div>
-        <div className="w-full flex justify-center h-[300px] items-center">
+        <div className="w-full flex justify-center my-28 items-center">
           <button className="btn-primary ">
             View more
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

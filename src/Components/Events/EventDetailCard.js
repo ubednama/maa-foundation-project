@@ -1,8 +1,8 @@
 const EventDetailCard = ({ data }) => {
     return (
-        <div className="flex flex-col items-start justify-start p-4 bg-white rounded-lg w-full max-w-full sm:flex-row sm:items-start sm:justify-start">
+        <div className="flex flex-col items-start justify-start p-4 rounded-lg w-full max-w-full sm:flex-row sm:items-start sm:justify-start">
             <img
-                className="w-full sm:w-1/3 h-auto object-contain rounded-md p-[10px]"
+                className="w-96 object-contain rounded-md p-[10px]"
                 loading="lazy"
                 alt="event_img"
                 src={data.image}

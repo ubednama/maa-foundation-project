@@ -8,19 +8,19 @@ const BlogsCard = ({ id, coverImage, authorImage, title, author, date }) => {
   return (
     <>
       <Link onClick={() => scrollToTop()} to={`/blogdata/${id}`}>
-        <div className="card gap-[32px] flex flex-col justify-between w-[378.3px] h-auto p-[10px] bg-[white] rounded-lg">
-          <div className="flex flex-col gap-[6px]">
-            <div className="h-[240px] w-[360px] overflow-hidden rounded-lg object-fill">
-              <img className="h-[240px] w-[358px]" src={coverImage} alt="" />
+        <div className="card gap-8 flex flex-col justify-between w-96 h-auto p-3 bg-white rounded-lg">
+          <div className="flex flex-col gap-3">
+            <div className="h-60 w-[360px] overflow-hidden rounded-lg object-fill bg-gray-dark">
+              <img className="h-60 w-[358px]" src={coverImage} alt="" />
             </div>
-            <div className="text-[24px] font-semibold">{title}</div>
+            <div className="text-2xl font-semibold font-sans text-[#0A0A0A]">{title}</div>
           </div>
           <div className="details flex justify-between items-center bottom-0">
             <div className="flex items-center gap-[8px]">
-              <div className="h-[36px] w-[36px] overflow-hidden rounded-full">
+              <div className="size-9 overflow-hidden rounded-full bg-gray-dark">
                 <img src={authorImage} alt="" />
               </div>
-              <div className="text-[16px] font-medium text-[#E03233]">
+              <div className="text-base font-medium text-[#E03233]">
                 {author}
               </div>
             </div>

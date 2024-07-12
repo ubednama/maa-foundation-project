@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   return (
-    <nav  className="relative py-4 flex justify-between items-center bg-white w-full mx-20 pb-8">
+    <nav  className="relative py-4 flex justify-between items-center bg-secondary-light w-full px-20 pb-8">
       <NavLink className={`text-3xl font-bold leading-none`} to="/">
         <img
           alt="maa-logo"

@@ -9,42 +9,37 @@ import { NavLink } from "react-router-dom";
 const Events = () => {
   return (
     // main div
-    <div className="flex flex-col gap-20 xl:gap-52 justify-center items-center ">
-      {/* herosection */}
-      <div className="w-11/12 flex justify-center items-center mt-12">
-        {/* inner div */}
-        <div className="w-full flex md:flex-row flex-col-reverse  justify-between">
-          <div className="p-4 flex gap-7 flex-col justify-center items-center md:items-start">
-            {/* First div content */}
-            <div className="text-neutral-950 text-3xl lg:text-5xl font-bold leading-tight lg:leading-10 text-center lg:text-left">
-              Transformative Programs for a{" "}
-              <span className="text-red-600 ml-2 lg:ml-0 mt-4 leading-relaxed">
-                Brighter Future
-              </span>
-            </div>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-4">
-              Empowering Women Celebrating Strength and Independence - Explore
-              Our Transformative Programs Driving Women's Rights, Education, and
-              Economic Opportunities for a Brighter Future.
-            </p>
-            <button className="btn-primary text-sm sm:text-base md:text-lg lg:text-xl">
-              <NavLink to="/contact">Contact Us</NavLink>
-            </button>
-          </div>
+    <div className="flex flex-col gap-20 xl:gap-52 justify-center items-center mx-20 2xl:mx-36">
+      <div className="grid grid-cols-1 md:grid-cols-2 mt-6 2xl:gap-8 -mr-8">
 
-          <div className="w-full flex justify-end items-center">
-            {/* Second div content with image */}
-            <img
-              alt="map"
-              src="assets/eventMap.png"
-              className="max-w-full max-h-full"
-            />
-          </div>
+        {/* First div content */}
+        <div className=" flex flex-col justify-center items-center md:items-start gap-10">
+          <h1 className="heading leading-snug font-semibold 2xl:pr-40">
+            <span className="">Transformative Programs for a </span>
+            <span className="main-heading">Brighter Future</span>
+          </h1>
+          <p className="text-[#4d4d4d] text-sm sm:text-base md:text-lg lg:text-xl pr-20 2xl:pr-80 -mt-5">
+            Empowering Women Celebrating Strength and Independence - Explore
+            Our Transformative Programs Driving Women's Rights, Education, and
+            Economic Opportunities for a Brighter Future.
+          </p>
+          <button className="btn-primary text-sm sm:text-base md:text-lg lg:text-xl">
+            <NavLink to="/contact" className="" >Contact Us</NavLink>
+          </button>
+        </div>
+
+        {/* Second div content with image */}
+        <div className="flex justify-center items-center">
+          <img
+            alt="map"
+            src="assets/eventMap.png"
+            className="w-full"
+          />
         </div>
       </div>
 
       {/* event list */}
-      <div className="w-11/12 mb-48 flex flex-col gap-40">
+      <div className="mb-32 flex flex-col gap-36">
         {events.map((data, index) => (
           <EventCard
             key={index}

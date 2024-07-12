@@ -4,26 +4,33 @@ import Hcomp from "./HoverComp";
 
 const Gallery = () => {
   return (
-      <div className="m-[8.5vw]">       
-        <section className="flex flex-wrap justify-between">
-          <div>
-            <p className="text-5xl font-[700] md:w-[39vw] md:mt-24 flex flex-col gap-2">
-              <p>Empowering Women Our{" "}</p>
-              <span className="text-[#EC1D1E]">Mission in Action</span>
-            </p>
-            <p className="pt-8 text-xl md:w-[30vw]">
-              Explore our journey of empowering women through impactful
-              initiatives. Witness the transformation and strength in every story
-              captured in our mission-driven gallery
-            </p>
-            
-            <NavLink to="/contact">
-              <button className="btn-primary mt-11">Contact Us</button>
-            </NavLink>
-            
-          </div>
-          <img className=" md:h-[44vw] hidden md:flex" src="/gallery/heroImage1.jpeg" alt="hero_image" />
-        </section>
+      <div className="mx-20 mb-20">       
+      <div className="grid grid-cols-1 md:grid-cols-2 mt-6 2xl:gap-8">
+        <div className=" flex flex-col justify-center items-center md:items-start gap-10">
+
+          {/* First div content */}
+          <h1 className="heading leading-snug font-semibold">
+            <span className="">Empowering Women Our </span><span className="main-heading">Mission in Action</span>
+          </h1>
+          <p className="text-[#4d4d4d] text-sm sm:text-base md:text-lg lg:text-xl pr-20 2xl:pr-80 -mt-5">
+            Explore our journey of empowering women through impactful
+            initiatives. Witness the transformation and strength in every story
+            captured in our mission-driven gallery.
+          </p>
+          <button className="btn-primary text-sm sm:text-base md:text-lg lg:text-xl">
+            <NavLink to="/contact" className="" >Contact Us</NavLink>
+          </button>
+        </div>
+        <div className=" flex justify-center items-center">
+          {/* Second div content with image */}
+          <img
+            alt="hero_image"
+            src="/gallery/heroImage1.jpeg"
+            className="w-full"
+          />
+        </div>
+      </div>
+
         <section className="grid  md:grid-cols-3 gap-12 mt-40 ">
             <div className="bg-cover bg-center h-[38vw] rounded-md" style={{ backgroundImage: "url('/gallery/gall2.jpeg')" }}>
               <Hcomp heading={"Women Education"} text={"Explore the inspiring Women Educating Programme by Maa Foundation, empowering women through education to create brighter futures. Witness their journey and achievements here."} />

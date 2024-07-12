@@ -16,8 +16,8 @@ import Payment from './Components/Home/Payment';
 
 function App() {
   return (
-    <>
-    <div  className='flex top-0 sticky  shadow-custom z-50'><Header /></div>
+    <div className='bg-secondary-light font-lato'>
+    <div  className='flex top-0 sticky z-20'><Header /></div>
     <div id='header' className=''></div>
    
         <Routes>
@@ -37,7 +37,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
     <Footer />
-    </>
+    </div>
   );
 }
 

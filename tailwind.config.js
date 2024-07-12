@@ -12,8 +12,9 @@ module.exports = {
         'primary-base': '#FF2020',
         'primary-light': '#FF6868',
         'primary-dark': '#6B0303',
-        'secondary': '#FFDEDE'
-
+        'secondary': '#FFDEDE',
+        'secondary-light': '#FFFAFA',
+        'gray-dark': '#4D4D4D'
       },
       boxShadow: {
         'custom': '0 4px 8px rgba(0, 0, 0, 0.1)', 
@@ -40,7 +41,7 @@ module.exports = {
           '@apply text-lg sm:text-4xl lg:text-5xl': {},
         },
         '.main-heading': {
-          '@apply text-primary-base': {},
+          '@apply text-primary-base font-semibold': {},
         },
           '.checkbox': {
             '@apply appearance-none text-green-600 w-6 h-6 bg-white rounded-md border-2 border-black focus:ring-2 focus:ring-gray-700 hover:bg-green-600': {},

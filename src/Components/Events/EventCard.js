@@ -29,18 +29,18 @@ const EventCard = ({ image, title, subtitle, path, index, id}) => {
         {/* content div */}
         <div className="flex flex-col justify-center items-start gap-9 max-w-[590px]">
           {/* title */}
-          <div className="font-semibold md:text-[40px] text-[30px]">
+          <div className="font-semibold md:text-4xl">
             {title}
           </div>
 
           {/* description */}
-          <div className="font-normal text-[18px] text-[#666666]">
+          <div className="font-normal text-lg text-gray-dark">
             {subtitle}
           </div>
 
           {/* button for navigating to full event page */}
           <Link to={`/event-detail/${id}`} onClick={() => scrollToTop()}>
-            <button className="flex items-center justify-center gap-3 font-semibold text-primary-light hover:text-primary-dark">
+            <button className="flex items-center justify-center gap-3 text-lg text-primary-light hover:text-primary-dark">
               Learn More <GoArrowRight></GoArrowRight>
             </button>
           </Link>

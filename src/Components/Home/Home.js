@@ -7,16 +7,18 @@ import { NavLink } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="flex flex-col gap-24 mt-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 mx-36 mt-6 gap-8">
-        <div className=" flex flex-col justify-center items-center md:items-start gap-8">
+    <div className="flex flex-col gap-20 pt-4 bg-secondary-light">
+
+      {/* First div */}
+      <div className="grid grid-cols-1 md:grid-cols-2 mx-16 2xl:mx-36 mt-6 2xl:gap-8">
+        <div className=" flex flex-col justify-center items-center md:items-start gap-10">
 
           {/* First div content */}
           <h1 className="heading leading-snug font-semibold">
             <span className="">Leading the Way to Women's </span>
             <span className="main-heading">Empowerment</span>
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl w-2/3">
+          <p className="text-[#4d4d4d] text-sm sm:text-base md:text-lg lg:text-xl pr-20 2xl:pr-80 -mt-5">
             Empowering women to lead with confidence and strength. Join us in
             creating a world of equality and opportunity for all women.
           </p>
@@ -24,7 +26,7 @@ const Home = () => {
             <NavLink to="/contact" className="" >Contact Us</NavLink>
           </button>
         </div>
-        <div className=" flex justify-center items-center">
+        <div className=" flex justify-center items-center -mr-4">
           {/* Second div content with image */}
           <img
             alt="map"
@@ -34,13 +36,14 @@ const Home = () => {
         </div>
       </div>
 
+      {/* Objective Element */}
       <div id="objective">
-          <h1 className="heading font-medium text-center">
-            <span className="">Our </span>
-            <span className="main-heading">Objective</span>
-          </h1>
+        <h1 className="heading font-medium text-center">
+          <span className="">Our </span>
+          <span className="main-heading">Objective</span>
+        </h1>
 
-        <div className="flex flex-wrap justify-center h-auto m-4 md:m-16 mb-2 ">
+        <div className="flex flex-wrap justify-center h-auto mt-2 lg:mt-6 mx-4 lg:mx-20">
           <Card
             imgSrc={"assets/womenEmpowerment.png"}
             cardTitle={"Women Empowerment"}
@@ -65,13 +68,13 @@ const Home = () => {
         </div>
       </div>
 
-
-
-
+      {/* Volunteer Element */}
       <div id="volunteer">
         <VolunteerElement />
       </div>
-      <div className="mt-32 mb-16">
+
+      {/* Donate Element */}
+      <div className="mt-10">
         <div className="flex justify-center items-center ">
           <h1 className="heading leading-snug">
             <span className="">Become a </span>
@@ -80,7 +83,7 @@ const Home = () => {
         </div>
 
         <section
-          className="w-full h-auto md:h-[790px] lg:h-[844px] mb-10 flex justify-center sm:block"
+          className="w-full h-auto md:h-[790px] lg:h-[844px] flex justify-center items-center sm:block"
           style={{
             background: `linear-gradient(89.63deg,#ffffff 39.45%,rgba(0, 0, 0, 0.62) 70.46%), 
     url('/assets/maa.png')`,
@@ -90,14 +93,14 @@ const Home = () => {
             backgroundBlendMode: "screen",
           }}
         >
-          <div className="w-full max-w-sm  md:max-w-lg m-4 p-4 md:m-16">
+          <div className="w-full max-w-sm  md:max-w-lg mt-2 lg:mt-6 ml-16 p-4">
             <div className="w-full max-w-md mt-6">
-              <span className="font-medium text-primary-base text-xl sm:text-lg md:text-xl lg:text-2xl leading-8 tracking-wide block text-center">
-                MAA FOUNDATION
-              </span>
-              <span className="font-normal text-base sm:text-sm md:text-base lg:text-lg leading-6 tracking-wide block text-center mt-4">
-                has been working in India for over 70 years, for the upliftment of marginalized women and girls through 53 programmes in 18 states and 130+ districts.
-              </span>
+              <div className="tracking-wide leading-6">
+                <span className="font-medium text-primary-base text-xl sm:text-lg md:text-xl lg:text-2xl">MAA FOUNDATION </span>
+                <span className="font-normal text-base sm:text-sm md:text-base lg:text-lg">
+                  has been working in India for over 70 years, for the upliftment of marginalized women and girls through 53 programmes in 18 states and 130+ districts.
+                </span>
+              </div>
               <p className="input-field-primary mt-4 text-normal w-full">
                 MAA FOUNDATION PAN NUMBER : A125D4G46d
               </p>

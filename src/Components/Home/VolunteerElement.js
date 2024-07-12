@@ -3,12 +3,11 @@ import validator from "validator";
 
 const VolunteerElement = () => {
 
-  const [dateOfBirth, setDateOfBirth] = useState(new Date());
   const [volunteerData, setVolunteerData] = useState({
     name: "",
     email: "",
     phoneNumber: "",
-    // dob: "",
+    dob: "",
     address: "",
     reason: "",
     agreed: false,
@@ -32,12 +31,15 @@ const VolunteerElement = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("submit clicked")
     // ToDo: Process Volunteer data
     if (volunteerData.email.trim() !== "" && validator.isEmail(volunteerData.email)) console.log("Volunteer Data:", volunteerData);
     else {
       //ToDo: display toast here for invalid email
     }
   };
+
+  const isFormValid = volunteerData.name && volunteerData.email && volunteerData.dob && volunteerData.address && volunteerData.reason && volunteerData.agreed;
 
   return (
     <div className="">
@@ -48,7 +50,7 @@ const VolunteerElement = () => {
         </h1>
       </div>
       <section
-        className="volunteer w-full h-[882px] bg-cover bg-center bg-no-repeat mt-2 md:mt-10 "
+        className="volunteer w-full h-[882px] bg-cover bg-center bg-no-repeat mt-2 md:mt-6 "
         style={{
           background: `linear-gradient(261.68deg, #ffffff 6.38%, #ffffff 11.65%, #ffffff 17.15%, #ffffff 20.6%, #ffffff 24.43%, #ffffff 36.62%, #ffffff 41.71%, #ffffff 45.65%, rgba(203, 203, 203, 0.1) 89.6%), url('/assets/volunteer.png')`,
           backgroundSize: "100% auto",
@@ -95,6 +97,7 @@ const VolunteerElement = () => {
                 name="dob"
                 value={volunteerData.dob}
                 onChange={handleChange}
+                max={new Date(new Date().setFullYear(new Date().getFullYear() - 14)).toISOString().split("T")[0]}     // ! to make sure user is minimum 14 years of age
               />
             </div>
 
@@ -120,7 +123,10 @@ const VolunteerElement = () => {
                 id="link-checkbox"
                 type="checkbox"
                 value=""
+                name="agreed"
                 className="checkbox"
+                checked={volunteerData.agreed}
+                onChange={handleChange}
               />
               <label
                 htmlFor="link-checkbox"
@@ -130,7 +136,7 @@ const VolunteerElement = () => {
               </label>
             </div>
             <div className="flex items-center">
-              <button className="btn-primary mx-auto ">
+              <button className="btn-primary mx-auto disabled:bg-primary-dark" disabled={!isFormValid}>
                 Submit
               </button>
             </div>

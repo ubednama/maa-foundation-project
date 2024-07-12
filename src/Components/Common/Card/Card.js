@@ -3,24 +3,24 @@ import { NavLink } from "react-router-dom";
 
 const Card = ({ imgSrc, cardTitle, cardDescription, link = "#" }) => {
   return (
-    <div className="w-full sm:w-1/2 lg:w-1/3 p-4">
+    <div className="w-full sm:w-1/2 lg:w-1/3 p-4 cursor-pointer">
       <div>
         <img src={imgSrc} alt="" className="w-full h-auto" />
       </div>
 
-      <div className="flex flex-col justify-between h-40">
+      <div className="flex flex-col justify-between h-40 gap-1">
         <div>
-          <h2 className="font-semibold mt-2 leading-9 text-xl">{cardTitle}</h2>
-          <p className="font-light text-lg">{cardDescription}</p>
+          <h2 className="font-semibold mt-2 leading-9 text-xl text-[#0A0A0A]">{cardTitle}</h2>
+          <p className="font-light text-lg text-gray-dark">{cardDescription}</p>
         </div>
-        <NavLink to={link} className="flex items-center text-red-500 hover:text-red-600transition duration-300">
+        <NavLink to={link} className="flex items-center text-primary-base transition duration-300 hover:text-primary-dark">
           <span className="font-medium">Learn more</span>
           <svg
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-6 h-6 ml-1"
+            className="size-6 ml-1"
           >
             <path
               strokeLinecap="round"

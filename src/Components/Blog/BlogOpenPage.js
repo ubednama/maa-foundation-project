@@ -19,7 +19,7 @@ const BlogOpenPage = () => {
   const date = blogsData[blogdataId - 1].date;
   const data = blogsData[blogdataId - 1].data;
   return (
-    <div className=" bg-secondary">
+    <div className=" bg-secondary-light">
       <div className="w-full h-auto">
         <img className="w-full" src={coverImage} alt="" />
       </div>
@@ -29,7 +29,7 @@ const BlogOpenPage = () => {
             <div className="h-[30px] w-[30px] overflow-hidden rounded-full">
               <img src={authorImage} alt="" />
             </div>
-            <div className="text-[15px] sm:text-[20px] font-medium text-[#E03233]">
+            <div className="text-[15px] sm:text-[20px] font-medium text-primary-base">
               {author}
             </div>
           </div>
@@ -42,16 +42,16 @@ const BlogOpenPage = () => {
         </div>
       </div>
 
-      <div className="py-4 sm:py-10 lg:py-20 flex justify-center items-center bg-[#ec1d1d3b] text-[25px] sm:text-[35px] lg:text-[45px] font-semibold px-8 sm:px-14 lg:px-28">
+      <div className="font-sans py-4 sm:py-10 lg:py-20 px-8 sm:px-14 lg:px-28 flex justify-center items-center bg-[#FFC3C4] text-3xl lg:text-5xl font-semibold leading-loose">
         {title}
       </div>
 
-      <div className="text-[18px] sm:text-[20px] lg:text-[25px] flex flex-col px-8 sm:px-14 lg:px-28">
+      <div className="flex flex-col px-8 sm:px-14 lg:px-28 lg:text-2xl mt-4">
         <div>
           {data.map((item) => {
             return (
-              <p className="my-[30px]">
-                <span className="text-[#E03233] font-medium">
+              <p className="my-8 text-gray-dark">
+                <span className="text-primary-base font-medium">
                   {item.datatitle} :{" "}
                 </span>
                 {item.datadesc}
@@ -61,8 +61,7 @@ const BlogOpenPage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col h-auto w-full justify-center gap-10 items-center">
-
+      <div className="flex flex-col justify-center gap-10 items-center my-24 mx-24">
         {nextBlogs.map((item) => {
           return (
             <BlogsOpenPageCard
