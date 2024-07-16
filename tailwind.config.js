@@ -2,7 +2,10 @@ const plugin = require('tailwindcss/plugin')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js,jsx}"],
+  content: [
+    "./src/**/*.{html,js,jsx}",
+    "./public/index.html"
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -17,11 +20,11 @@ module.exports = {
         'gray-dark': '#4D4D4D'
       },
       boxShadow: {
-        'custom': '0 4px 8px rgba(0, 0, 0, 0.1)', 
+        'custom': '0 4px 8px rgba(0, 0, 0, 0.1)',
       },
     },
     fontFamily: {
-      sans: ['Lato', 'sans-serif']
+      sans: ['sans-serif']
     },
   },
   plugins: [
@@ -43,47 +46,47 @@ module.exports = {
         '.main-heading': {
           '@apply text-primary-base font-semibold': {},
         },
-          '.checkbox': {
-            '@apply appearance-none text-green-600 w-6 h-6 bg-white rounded-md border-2 border-black focus:ring-2 focus:ring-gray-700 hover:bg-green-600': {},
-            '&:checked': {
-              '@apply bg-green-600 border-green-600': {},
-              '&::after': {
-                content: "'\u2713'",
-                '@apply absolute text-white text-sm font-bold inset-0 flex items-center justify-center': {},
-              },
-            },
-            '&:checked:hover': {
-              '@apply bg-green-900 border-green-900': {},
-            },
-            '&:focus, &:focus-visible': {
-              '@apply outline-none ring-2 ring-green-900': {},
+        '.checkbox': {
+          '@apply appearance-none text-green-600 w-6 h-6 bg-white rounded-md border border-black focus:ring-2 focus:ring-gray-700 hover:bg-green-600': {},
+          '&:checked': {
+            '@apply bg-green-600 border-green-600': {},
+            '&::after': {
+              content: "'\u2713'",
+              '@apply absolute text-white text-sm font-bold inset-0 flex items-center justify-center': {},
             },
           },
-          '.custom-radio': {
-            '@apply absolute opacity-0 w-0 h-0': {},
-            '& + label': {
-              '@apply flex items-center cursor-pointer': {},
-              '.custom-radio-visual': {
-                '@apply w-6 h-6 inline-block mr-2 rounded-md border-2 border-black bg-white relative': {},
-                '&:hover': {
-                  '@apply bg-green-600': {},
-                },
+          '&:checked:hover': {
+            '@apply bg-green-900 border-green-900': {},
+          },
+          '&:focus, &:focus-visible': {
+            '@apply outline-none ring-2 ring-green-900': {},
+          },
+        },
+        '.custom-radio': {
+          '@apply absolute opacity-0 w-0 h-0': {},
+          '& + label': {
+            '@apply flex items-center cursor-pointer': {},
+            '.custom-radio-visual': {
+              '@apply w-6 h-6 inline-block mr-2 rounded-md border-2 border-black bg-white relative': {},
+              '&:hover': {
+                '@apply bg-green-600': {},
               },
-            },
-            '&:checked + label .custom-radio-visual': {
-              '@apply bg-green-600 border-green-600': {},
-              '&::after': {
-                content: "'\u2714'",
-                '@apply absolute text-white text-sm font-bold inset-0 flex items-center justify-center': {},
-              },
-            },
-            '&:checked:hover + label .custom-radio-visual': {
-              '@apply bg-green-900 border-green-900': {},
-            },
-            '&:focus + label .custom-radio-visual': {
-              '@apply ring-2 ring-green-900': {},
             },
           },
+          '&:checked + label .custom-radio-visual': {
+            '@apply bg-green-600 border-green-600': {},
+            '&::after': {
+              content: "'\u2714'",
+              '@apply absolute text-white text-sm font-bold inset-0 flex items-center justify-center': {},
+            },
+          },
+          '&:checked:hover + label .custom-radio-visual': {
+            '@apply bg-green-900 border-green-900': {},
+          },
+          '&:focus + label .custom-radio-visual': {
+            '@apply ring-2 ring-green-900': {},
+          },
+        },
       });
     }),
   ]

@@ -2,7 +2,7 @@ import QR from "./paymet_images/QR.png";
 
 export default function QR_Portal(){
     return(
-        <div className="  flex-col p-[1.27rem] border-2 border-red-600 w-[132%]">
+        <div className="  flex-col p-[1.27rem] border-2 border-primary-base w-[132%]">
             <p className="text-gray-500 text-3xl">QR CODE</p>
 
             <div className="flex justify-center items-center w-full  h-[400px]">

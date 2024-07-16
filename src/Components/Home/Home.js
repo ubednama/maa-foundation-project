@@ -7,10 +7,10 @@ import { NavLink } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="flex flex-col gap-20 pt-4 bg-secondary-light">
+    <div className="flex flex-col gap-20 bg-secondary-light">
 
       {/* First div */}
-      <div className="grid grid-cols-1 md:grid-cols-2 mx-16 2xl:mx-36 mt-6 2xl:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:mx-20 2xl:mx-36 mt-6 2xl:gap-8">
         <div className=" flex flex-col justify-center items-center md:items-start gap-10">
 
           {/* First div content */}
@@ -43,8 +43,9 @@ const Home = () => {
           <span className="main-heading">Objective</span>
         </h1>
 
-        <div className="flex flex-wrap justify-center h-auto mt-2 lg:mt-6 mx-4 lg:mx-20">
+        <div className="flex flex-wrap justify-between items-center h-auto mt-2 lg:mt-6 mx-4 lg:mx-20">
           <Card
+            className=""
             imgSrc={"assets/womenEmpowerment.png"}
             cardTitle={"Women Empowerment"}
             cardDescription={
@@ -93,16 +94,16 @@ const Home = () => {
             backgroundBlendMode: "screen",
           }}
         >
-          <div className="w-full max-w-sm  md:max-w-lg mt-2 lg:mt-6 ml-16 p-4">
-            <div className="w-full max-w-md mt-6">
+          <div className="w-full max-w-96  md:max-w-lg lg:max-w-2xl xl:max-w-3xl mt-2 lg:mt-6 ml-16 p-4">
+            <div className="w-full max-w-md lg:max-w-lg mt-6">
               <div className="tracking-wide leading-6">
                 <span className="font-medium text-primary-base text-xl sm:text-lg md:text-xl lg:text-2xl">MAA FOUNDATION </span>
                 <span className="font-normal text-base sm:text-sm md:text-base lg:text-lg">
                   has been working in India for over 70 years, for the upliftment of marginalized women and girls through 53 programmes in 18 states and 130+ districts.
                 </span>
               </div>
-              <p className="input-field-primary mt-4 text-normal w-full">
-                MAA FOUNDATION PAN NUMBER : A125D4G46d
+              <p className="input-field-primary mt-4 text-normal font-bold text-black w-full">
+                MAA FOUNDATION PAN NUMBER : <span className="text-[#0B0B0B]">A125D4G46d</span>
               </p>
               <div className="mt-4" id="donateSection">
                 <DonateElement />

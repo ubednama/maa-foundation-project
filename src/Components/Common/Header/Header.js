@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
-import { Link } from "react-scroll";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const linkStyle = (path) =>
-    location.pathname === path ? "text-red-600 underline":"text-black-500";
+    location.pathname === path
+      ? "text-primary-base underline !font-medium"
+      : "text-black-500";
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -14,8 +16,22 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleNavigation = (url) => {
+    setIsOpen(false);
+    navigate(url);
+    window.scrollTo(0, 0);
+  };
+
+  const menuItems = [
+    ["Home", "/"],
+    ["Event", "/event"],
+    ["Gallery", "/gallery/"],
+    ["Blog", "/blogs"],
+    ["About", "/about"],
+  ];
+
   return (
-    <nav  className="relative py-4 flex justify-between items-center bg-secondary-light w-full px-20 pb-8">
+    <nav className="relative py-4 flex justify-between items-center bg-secondary-light w-full px-20 pb-8">
       <NavLink className={`text-3xl font-bold leading-none`} to="/">
         <img
           alt="maa-logo"
@@ -23,6 +39,8 @@ const Header = () => {
           src="/assets/maa-logo.png"
         />
       </NavLink>
+
+      {/* Mobile menu */}
       <div className="lg:hidden">
         <button
           onClick={toggleMenu}
@@ -44,48 +62,36 @@ const Header = () => {
           </svg>
         </button>
       </div>
+
+      {/* Desktop menu */}
       <ul
-        className={`lg:flex lg:items-center lg:w-auto lg:space-x-4 ${
-          isOpen ? "block" : "hidden"
-        } absolute lg:relative top-16 lg:top-auto left-0 lg:left-auto w-full lg:w-auto bg-white lg:bg-transparent p-4 lg:p-0`}
+        className={`lg:flex lg:items-center lg:w-auto lg:space-x-4 ${isOpen ? "block" : "hidden"} absolute lg:relative top-16 lg:top-auto left-0 lg:left-auto w-full lg:w-auto bg-white lg:bg-transparent p-4 lg:p-0`}
       >
-        {[
-          ["Home", "/" ],
-          ["Event", "/event", ],
-          ["Gallery", "/gallery" ],
-          ["Blog", "/blog" ],
-          [ "About", "/about" ],
-        ].map(([title, url]) => (
+        {menuItems.map(([title, url]) => (
           <li key={url}>
-            <Link
-              smooth={true}
-              duration={500}
-              className={`nav-link ${linkStyle(url)}`}
-              to="header"
+            <button
+              className={`nav-link font-normal ${linkStyle(url)}`}
+              onClick={() => handleNavigation(url)}
             >
-              <NavLink to={url}>{title}</NavLink>
-            </Link>
+              {title}
+            </button>
           </li>
         ))}
         <li className="mt-4 lg:mt-0">
-          <NavLink
-            className={`block lg:inline-block py-2 px-6 border border-primary-base  bg-primary-base hover:bg-primary-dark text-white  text-sm font-bold rounded-xl ${linkStyle(
-              "/signup"
-            )} no-underline`}
-            to="/signup"
+          <button
+            className={`block lg:inline-block py-2 px-6 border border-primary-base  hover:border-primary-dark bg-primary-base hover:bg-primary-dark text-white text-sm font-bold rounded-xl ${linkStyle("/signup")} no-underline`}
+            onClick={() => handleNavigation("/signup")}
           >
             Sign Up
-          </NavLink>
+          </button>
         </li>
         <li className="mt-4 lg:mt-0">
-          <NavLink
-            className={`block lg:inline-block py-2 px-6 border border-primary-base hover:bg-primary-base hover:text-white  text-sm font-bold rounded-xl ${linkStyle(
-              "/login"
-            )} no-underline`}
-            to="/login"
+          <button
+            className={`block lg:inline-block py-2 px-6 border border-primary-base hover:bg-primary-base hover:text-white text-sm font-bold rounded-xl ${linkStyle("/login")} no-underline`}
+            onClick={() => handleNavigation("/login")}
           >
             Log In
-          </NavLink>
+          </button>
         </li>
       </ul>
     </nav>

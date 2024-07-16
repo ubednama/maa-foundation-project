@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 function Footer() {
   return (
     <div className="bg-secondary">
-      <div className="py-10 mx-16 flex justify-between gap-4 text-gray-dark font-light">
+      <div className="py-10 mx-20 flex justify-between gap-4 text-gray-dark font-light">
         {/* First Div */}
         <div className="p-4 flex flex-col ">
           <img
@@ -21,20 +21,20 @@ function Footer() {
         </div>
 
         <div>
-          <ul className="space-y-2 mt-6">.
+          <ul className="space-y-2 mt-6 font-normal">.
             <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">Quick Links</h2>
             <li>
-              <Link to="objective" smooth={true} duration={500} className="hover:text-primary-base hover:underline cursor-pointer ">
+              <Link to="objective" smooth={true} duration={500} className="hover:text-primary-base hover:underline underline-offset-1 cursor-pointer ">
                 <NavLink to="/" >Objective</NavLink>
               </Link>
             </li>
             <li>
-              <Link to="volunteer" smooth={true} duration={500} className="hover:text-primary-base hover:underline cursor-pointer">
+              <Link to="volunteer" smooth={true} duration={500} className="hover:text-primary-base hover:underline underline-offset-1 cursor-pointer">
                 <NavLink to="/">Volunteer</NavLink>
               </Link>
             </li>
             <li>
-              <Link to="donateSection" smooth={true} duration={500} className="hover:text-primary-base hover:underline cursor-pointer">
+              <Link to="donateSection" smooth={true} duration={500} className="hover:text-primary-base hover:underline underline-offset-1 cursor-pointer">
                 <NavLink to="/">Donate</NavLink>
               </Link>
             </li>
@@ -42,7 +42,7 @@ function Footer() {
         </div>
 
         <div>
-          <ul className="space-y-2 mt-12">
+          <ul className="space-y-2 mt-12 font-normal">
             <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">Shortcuts</h2>
             <li>
               <NavLink to="/blog" className={"hover:text-primary-base hover:underline"}>
@@ -65,14 +65,14 @@ function Footer() {
 
         <div className="mt-12">
           <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">Get Updated</h2>
-          <div className="relative flex items-center">
+          <div className="relative flex items-center justify-center">
             <input
               type="email"
               placeholder="Enter your email"
-              className="input-field-primary mb-4 bg-inherit w-80"
+              className="input-field-primary mb-4 bg-inherit w-80 font-normal"
             />
             <button
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 text-center text-sm btn-primary -mt-2"
+              className="absolute right-2 transform -translate-y-1/2 text-center text-sm text-primary-base font-bold"
               type="button"
             >
               Subscribe

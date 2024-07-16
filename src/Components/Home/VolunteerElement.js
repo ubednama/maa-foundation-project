@@ -58,7 +58,7 @@ const VolunteerElement = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="flex items-center sm:h-full justify-center sm:justify-end sm:mr-[5%] lg:mr-32">
+        <div className="flex items-center sm:h-full justify-center sm:justify-end sm:mr-[5%] lg:mr-20">
           <form className="mt-2 space-y-3 xl:space-y-6 sm:mt-10 w-[80%] sm:w-full sm:max-w-96 lg:max-w-md xl:max-w-lg"
             onSubmit={handleSubmit}>
             <input
@@ -97,7 +97,7 @@ const VolunteerElement = () => {
                 name="dob"
                 value={volunteerData.dob}
                 onChange={handleChange}
-                max={new Date(new Date().setFullYear(new Date().getFullYear() - 14)).toISOString().split("T")[0]}     // ! to make sure user is minimum 14 years of age
+                max={new Date(new Date().setFullYear(new Date().getFullYear() - 16)).toISOString().split("T")[0]}     // ! to make sure user is minimum 14 years of age
               />
             </div>
 

@@ -32,7 +32,7 @@ const EventDetail = () => {
             <h1 className="text-5xl font-semibold leading-snug">{event.title}</h1>
             <div className="relative font-normal text-gray-dark text-lg">
               {Array.from({ length: 4 }).map((_, index) => (<>
-                <p key={index} className="mb-4">{event.subtitle}</p><p className="my-4"></p>
+                <p key={index} className="mb-4 text-xl leading-8">{event.subtitle}</p><p className="my-4"></p>
               </>
               ))}
               {/* <p>{event.subtitle}</p>

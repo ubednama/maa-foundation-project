@@ -1,13 +1,11 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import blogsData from "./blogsdata"
-import { image } from "./blogsdata";
+import blogsData from "./blogsData"
+import { image } from "./blogsData";
 import BlogsOpenPageCard from "./BlogsOpenPageCard";
 
 const BlogOpenPage = () => {
-  function scrollToTop() {
-    window.scrollTo(0, 0);
-  }
+
   const { blogdataId } = useParams();
   const currentIndex = blogsData.findIndex((item) => item.id === blogdataId);
   const nextBlogs = blogsData.slice(currentIndex + 1, currentIndex + 6);
@@ -50,7 +48,7 @@ const BlogOpenPage = () => {
         <div>
           {data.map((item) => {
             return (
-              <p className="my-8 text-gray-dark">
+              <p className="my-8 text-gray-dark text-xl leading-8">
                 <span className="text-primary-base font-medium">
                   {item.datatitle} :{" "}
                 </span>
@@ -61,8 +59,8 @@ const BlogOpenPage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center gap-10 items-center my-24 mx-24">
-        {nextBlogs.map((item) => {
+      <div className="relative flex flex-col justify-center gap-10 items-start my-24 mx-24">
+        {nextBlogs.map((item, index) => {
           return (
             <BlogsOpenPageCard
               key={item.id}
@@ -73,9 +71,11 @@ const BlogOpenPage = () => {
               sample_data={item.sample_data}
               author={item.author}
               date={item.date}
+              className={index === nextBlogs.length - 1 ? "relative z-10" : ""}
             />
           );
         })}
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-secondary-light to-transparent z-0"></div>
       </div>
     </div>
   );
