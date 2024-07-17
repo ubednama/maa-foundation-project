@@ -34,7 +34,7 @@ export default function UPI_Portal() {
                                 
                     <div className="flex items-center justify-between">
                         <div className="flex items-center  ">
-                            <input type="radio" name="paymentMethod" value="googlepay" className="mr-2" />
+                            <input autoFocus type="radio" name="paymentMethod" value="googlepay" className="mr-2" />
                             <img src={googlepay} className="mr-2" />
                             <p>Google Pay</p>
                         </div>
@@ -42,7 +42,7 @@ export default function UPI_Portal() {
                                 
                     <div className="flex items-center justify-between">
                         <div className="flex items-center  ">
-                            <input type="radio" name="paymentMethod" value="paytm" className="mr-2" />
+                            <input autoFocus type="radio" name="paymentMethod" value="paytm" className="mr-2" />
                             <img src={paytm} className="mr-2" />
                             <p>Paytm</p>
                         </div>

@@ -1,6 +1,5 @@
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./src/**/*.{html,js,jsx}",
@@ -32,10 +31,29 @@ module.exports = {
     plugin(function ({ addComponents }) {
       addComponents({
         '.btn-primary': {
-          '@apply px-4 py-2 rounded-md font-medium font-lato text-[#FFF] bg-primary-base hover:bg-primary-dark': {},
+          '@apply px-4 py-2 rounded-md font-medium text-white font-lato bg-primary-base': {},
+        },
+        '.btn-primary:hover': {
+          '@apply hover:bg-primary-dark hover:duration-100': {},
+        },
+        '.btn-primary:disabled': {
+          '@apply bg-primary-base': {},
+          'pointer-events': 'none',
         },
         '.input-field-primary': {
-          '@apply text-gray-500 text-sm border border-gray-700 rounded-md px-2 lg:px-4 py-2 w-full lg:py-3': {},
+          '@apply text-sm border border-gray-700 rounded-md px-2 lg:px-4 py-2 w-full lg:py-3 bg-inherit': {},
+          'color': 'gray-500',
+          '&::placeholder': {
+            'color': 'gray-500'
+          },
+          '&:focus': {
+            'border-color': 'black',
+            'outline': 'none',
+            'color': 'black',
+            '&::placeholder': {
+              'color': 'gray-400'
+            }
+          }
         },
         '.nav-link': {
           '@apply block lg:inline-block text-xl hover:text-primary-base hover:underline underline-offset-8 py-2 lg:py-0 lg:mr-8 decoration-2': {},
@@ -90,4 +108,4 @@ module.exports = {
       });
     }),
   ]
-}
+};

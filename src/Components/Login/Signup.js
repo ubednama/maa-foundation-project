@@ -18,11 +18,11 @@ function Signup() {
                     </div>
 
                     <div className="flex justify-center w-5/6  mt-6 ">
-                        <input
+                        <input autoFocus
                             placeholder="First Name"
                             className="w-1/2 mr-5 text-gray-500 text-xl border border-gray-700 rounded-[4px] px-2 lg:px-4 py-2 lg:py-3"
                         />
-                        <input
+                        <input autoFocus
                             placeholder="Last Name"
                             className="w-1/2 ml-5 text-gray-500 text-xl border border-gray-700 rounded-[4px] px-2 lg:px-4 py-2 lg:py-3"
                         />
@@ -30,14 +30,14 @@ function Signup() {
 
                     <div className="flex w-5/6 mt-6 space-x-10 text-xl">
                         <div class="flex items-center">
-                            <input id="bordered-radio-1" type="radio" value="male" name="gender" className="custom-radio absolute opacity-0 w-0 h-0" checked />
+                            <input autoFocus id="bordered-radio-1" type="radio" value="male" name="gender" className="custom-radio absolute opacity-0 w-0 h-0" checked />
                             <label for="bordered-radio-1" class="flex items-center cursor-pointer">
                                 <span class="custom-radio-visual w-6 h-6 inline-block mr-2 rounded border-2 border-black flex-shrink-0"></span>
                                 <span class="text-base">Male</span>
                             </label>
                         </div>
                         <div class="flex items-center">
-                            <input id="bordered-radio-2" type="radio" value="female" name="gender" className="custom-radio absolute opacity-0 w-0 h-0" />
+                            <input autoFocus id="bordered-radio-2" type="radio" value="female" name="gender" className="custom-radio absolute opacity-0 w-0 h-0" />
                             <label for="bordered-radio-2" class="flex items-center cursor-pointer">
                                 <span class="custom-radio-visual w-6 h-6 inline-block mr-2 rounded border-2 border-black flex-shrink-0"></span>
                                 <span class="text-base">Female</span>
@@ -46,22 +46,22 @@ function Signup() {
                     </div>
 
                     <div className="flex flex-col items-center w-5/6 mt-6 space-y-4">
-                        <input
+                        <input autoFocus
                             placeholder="Phone Number"
                             type='tel'
                             className="w-full text-gray-500 text-xl border border-gray-700 rounded-[4px] px-2 lg:px-4 py-2 lg:py-3"
                         />
-                        <input
+                        <input autoFocus
                             placeholder="Email"
                             type='mail'
                             className="w-full text-gray-500 text-xl border border-gray-700 rounded-[4px] px-2 lg:px-4 py-2 lg:py-3"
                         />
-                        <input
+                        <input autoFocus
                             placeholder="Password"
                             type='password'
                             className="w-full text-gray-500 text-xl border border-gray-700 rounded-[4px] px-2 lg:px-4 py-2 lg:py-3"
                         />
-                        <input
+                        <input autoFocus
                             placeholder="Confirm Password"
                             type='password'
                             className="w-full text-gray-500 text-xl border border-gray-700 rounded-[4px] px-2 lg:px-4 py-2 lg:py-3"
@@ -70,7 +70,7 @@ function Signup() {
 
                     <div className="flex flex-col w-5/6 mt-6 text-xl">
                         <div class="flex  mt-3 mb-3">
-                            <input type="checkbox" id="red-checkbox" value="" 
+                            <input autoFocus type="checkbox" id="red-checkbox" value="" 
                             // class="w-7 h-7 border-2 border-gray-700 text-gray-600 rounded-[6px] "
                             className='checkbox'
                              />
@@ -78,7 +78,7 @@ function Signup() {
                         </div>
 
                         <div class="flex  mt-3 mb-3">
-                            <input type="checkbox" value="" 
+                            <input autoFocus type="checkbox" value="" 
                             // class="w-7 h-7 border-2 border-gray-700 text-gray-600 rounded-[6px] "
                             className='checkbox' />
                             <label for="Male" class="ms-2 text-base text-gray-600 dark:text-gray-900">Notify me for all updates</label>

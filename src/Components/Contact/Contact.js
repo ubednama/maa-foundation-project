@@ -59,17 +59,17 @@ export default function Contact() {
           {/* Contact Form Section */}
           <div className="w-full lg:w-[45%] flex justify-center mt-8 lg:mt-0">
             <form className="w-full max-w-lg space-y-4">
-              <input
+              <input autoFocus
                 type="email"
                 placeholder="Your Mail"
                 className="input-field-primary text-base lg:text-xl text-[#9B9B9B] bg-secondary-light"
               />
-              <input
+              <input autoFocus
                 type="tel"
                 placeholder="Phone Number (optional)"
                 className="input-field-primary text-base lg:text-xl text-[#9B9B9B] bg-secondary-light"
               />
-              <textarea
+              <textarea autoFocus
                 placeholder="Provide Feedback"
                 className="input-field-primary text-base lg:text-xl text-[#9B9B9B] bg-secondary-light w-full h-44 resize-none rounded-md"
                 rows="4"

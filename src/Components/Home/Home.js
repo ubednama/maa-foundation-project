@@ -18,7 +18,7 @@ const Home = () => {
             <span className="">Leading the Way to Women's </span>
             <span className="main-heading">Empowerment</span>
           </h1>
-          <p className="text-[#4d4d4d] text-sm sm:text-base md:text-lg lg:text-xl pr-20 2xl:pr-80 -mt-5">
+          <p className="text-[#4d4d4d] text-sm sm:text-base md:text-lg lg:text-xl pr-20 2xl:pr-80 -mt-5 text-justify">
             Empowering women to lead with confidence and strength. Join us in
             creating a world of equality and opportunity for all women.
           </p>
@@ -75,7 +75,7 @@ const Home = () => {
       </div>
 
       {/* Donate Element */}
-      <div className="mt-10">
+      <div id="donate" className="mt-10">
         <div className="flex justify-center items-center ">
           <h1 className="heading leading-snug">
             <span className="">Become a </span>
@@ -96,9 +96,9 @@ const Home = () => {
         >
           <div className="w-full max-w-96  md:max-w-lg lg:max-w-2xl xl:max-w-3xl mt-2 lg:mt-6 ml-16 p-4">
             <div className="w-full max-w-md lg:max-w-lg mt-6">
-              <div className="tracking-wide leading-6">
-                <span className="font-medium text-primary-base text-xl sm:text-lg md:text-xl lg:text-2xl">MAA FOUNDATION </span>
-                <span className="font-normal text-base sm:text-sm md:text-base lg:text-lg">
+              <div className="tracking-wide leading-6 text-base ">
+                <span className="font-medium text-primary-base">MAA FOUNDATION </span>
+                <span className="font-normal  ">
                   has been working in India for over 70 years, for the upliftment of marginalized women and girls through 53 programmes in 18 states and 130+ districts.
                 </span>
               </div>

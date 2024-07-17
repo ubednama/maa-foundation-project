@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Card = ({ imgSrc, cardTitle, cardDescription, link = "#" }) => {
   return (
-    <div className="w-full sm:w-1/2 lg:w-96 cursor-pointer hover:scale-[1.15] hover:translate-y-6 transition-transform duration-100">
+    <div className="w-full sm:w-1/2 lg:w-96 cursor-pointer hover:scale-[1.15] hover:translate-y-6 transition-transform duration-300">
       <div>
         <img src={imgSrc} alt="" className="w-full h-auto" />
       </div>

@@ -39,7 +39,7 @@ const EventCard = ({ image, title, subtitle, path, index, id}) => {
           </div>
 
           {/* button for navigating to full event page */}
-          <Link to={`/event-detail/${id}`} onClick={() => scrollToTop()}>
+          <Link to={`/event/${id}`} onClick={() => scrollToTop()}>
             <button className="flex items-center justify-center gap-3 text-lg text-primary-light hover:text-primary-dark">
               Learn More <GoArrowRight></GoArrowRight>
             </button>

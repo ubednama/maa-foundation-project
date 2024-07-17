@@ -12,3 +12,8 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+/* added this to change selected input field border color */
+/* input.middle:focus {
+  outline-width: 0;
+} */

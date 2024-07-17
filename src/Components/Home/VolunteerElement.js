@@ -39,7 +39,7 @@ const VolunteerElement = () => {
     }
   };
 
-  const isFormValid = volunteerData.name && volunteerData.email && volunteerData.dob && volunteerData.address && volunteerData.reason && volunteerData.agreed;
+  const isFormValid = volunteerData.name && volunteerData.email && validator.isEmail(volunteerData.email) && volunteerData.dob && volunteerData.address && volunteerData.reason && volunteerData.agreed;
 
   return (
     <div className="">
@@ -61,14 +61,14 @@ const VolunteerElement = () => {
         <div className="flex items-center sm:h-full justify-center sm:justify-end sm:mr-[5%] lg:mr-20">
           <form className="mt-2 space-y-3 xl:space-y-6 sm:mt-10 w-[80%] sm:w-full sm:max-w-96 lg:max-w-md xl:max-w-lg"
             onSubmit={handleSubmit}>
-            <input
+            <input autoFocus
               className="input-field-primary"
               placeholder="Your Name"
               name="name"
               value={volunteerData.name}
               onChange={handleChange}
             />
-            <input
+            <input autoFocus
               className="input-field-primary"
               placeholder="Your email"
               name="email"
@@ -77,7 +77,7 @@ const VolunteerElement = () => {
             />
             <div className="flex items-center gap-1">
               <span className="input-field-primary text-sm w-fit">+91</span>
-              <input
+              <input autoFocus
                 className="input-field-primary"
                 placeholder="Your Number (optional)"
                 name="phoneNumber"
@@ -90,19 +90,19 @@ const VolunteerElement = () => {
             </div>
             <div className="flex items-center gap-1">
               <span className="input-field-primary text-sm min-w-[100px] lg:min-w-[120px] w-fit">Date of Birth:</span>
-              <input
+              <input autoFocus
                 className="input-field-primary max-h-[2.38rem] lg:max-h-[2.88rem] min-w-[120px]"
                 type="date"
                 placeholder="DOB"
                 name="dob"
                 value={volunteerData.dob}
                 onChange={handleChange}
-                max={new Date(new Date().setFullYear(new Date().getFullYear() - 16)).toISOString().split("T")[0]}     // ! to make sure user is minimum 14 years of age
+                max={new Date(new Date().setFullYear(new Date().getFullYear() - 16)).toISOString().split("T")[0]}     // ! to make sure user is minimum 16 years of age
               />
             </div>
 
 
-            <input
+            <input autoFocus
               className="input-field-primary"
               placeholder="Your Address"
               name="address"
@@ -119,7 +119,7 @@ const VolunteerElement = () => {
             />
 
             <div className="flex items-center gap-2">
-              <input
+              <input autoFocus
                 id="link-checkbox"
                 type="checkbox"
                 value=""
@@ -136,7 +136,7 @@ const VolunteerElement = () => {
               </label>
             </div>
             <div className="flex items-center">
-              <button className="btn-primary mx-auto disabled:bg-primary-dark" disabled={!isFormValid}>
+              <button className="btn-primary mx-auto" disabled={!isFormValid}>
                 Submit
               </button>
             </div>

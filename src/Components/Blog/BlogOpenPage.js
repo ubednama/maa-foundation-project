@@ -6,16 +6,16 @@ import BlogsOpenPageCard from "./BlogsOpenPageCard";
 
 const BlogOpenPage = () => {
 
-  const { blogdataId } = useParams();
-  const currentIndex = blogsData.findIndex((item) => item.id === blogdataId);
+  const { blogId } = useParams();
+  const currentIndex = blogsData.findIndex((item) => item.id === blogId);
   const nextBlogs = blogsData.slice(currentIndex + 1, currentIndex + 6);
 
-  const coverImage = blogsData[blogdataId - 1].coverImage;
-  const title = blogsData[blogdataId - 1].title;
-  const author = blogsData[blogdataId - 1].author;
-  const authorImage = blogsData[blogdataId - 1].authorImage;
-  const date = blogsData[blogdataId - 1].date;
-  const data = blogsData[blogdataId - 1].data;
+  const coverImage = blogsData[blogId - 1].coverImage;
+  const title = blogsData[blogId - 1].title;
+  const author = blogsData[blogId - 1].author;
+  const authorImage = blogsData[blogId - 1].authorImage;
+  const date = blogsData[blogId - 1].date;
+  const data = blogsData[blogId - 1].data;
   return (
     <div className=" bg-secondary-light">
       <div className="w-full h-auto">
@@ -75,7 +75,8 @@ const BlogOpenPage = () => {
             />
           );
         })}
-        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-secondary-light to-transparent z-0"></div>
+        {/* here using rgba for gradient effect... decrease opacity more for more transparency */}
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[rgba(255,250,250,0.5)] to-transparent z-0"></div>
       </div>
     </div>
   );

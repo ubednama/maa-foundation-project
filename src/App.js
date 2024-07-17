@@ -14,35 +14,38 @@ import Signup from './Components/Login/Signup';
 import Payment from './Components/Home/Payment';
 import { useEffect } from 'react';
 
-
 function App() {
   const location = useLocation();
 
   useEffect(() => {
     console.log('Current path:', location.pathname);
   }, [location]);
+
   return (
-    <div className='bg-secondary-light font-lato'>
-      <div className='flex top-0 sticky z-20'><Header /></div>
-      <div id='header' className=''></div>
-      {/* <div className='pt-4 h-full'> */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/payment" element={<Payment />} />
-        <Route path="/event" element={<Events />} />
-        <Route path="/event-detail/:eventid" element={<EventDetail />} />
-        <Route path="/gallery/*" element={<Gallery />} />
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/blog/:blogdataId" element={<BlogOpenPage />} />
-        {/* <Route path=":blogdataId" element={<BlogOpenPage/>} /> */}
-        {/* </Route> */}
-        <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer />
-      {/* </div> */}
+    <div className='bg-secondary-light font-lato flex flex-col min-h-screen'>
+      <header className='sticky top-0 z-20'>
+        <Header />
+      </header>
+      <main className='flex-grow'>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/event/:eventid" element={<EventDetail />} />
+          <Route path="/gallery/*" element={<Gallery />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blog/:blogId" element={<BlogOpenPage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+      <footer className='bg-secondary'>
+        <div className="py-10 mx-20 flex justify-between gap-4 text-gray-dark font-light">
+          <Footer />
+        </div>
+      </footer>
     </div>
   );
 }
