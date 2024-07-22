@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import validator from "validator";
+import axiosInstance from "../../axios/axios";
 
 const VolunteerElement = () => {
 
@@ -29,10 +30,26 @@ const VolunteerElement = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const clear = ()=>{
+    setVolunteerData({
+      name: "",
+      email: "",
+      phoneNumber: "",
+      dob: "",
+      address: "",
+      reason: "",
+      agreed: false,
+    });
+  }
+
+  const handleSubmit = async(e) => {
     e.preventDefault();
     console.log("submit clicked")
     // ToDo: Process Volunteer data
+    const res =  await axiosInstance.post('/create/volunteer',volunteerData);
+    console.log(res);
+    console.log(volunteerData);
+    clear();
     if (volunteerData.email.trim() !== "" && validator.isEmail(volunteerData.email)) console.log("Volunteer Data:", volunteerData);
     else {
       //ToDo: display toast here for invalid email

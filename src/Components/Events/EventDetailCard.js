@@ -5,7 +5,7 @@ const EventDetailCard = ({ data }) => {
                 className="w-96 object-contain rounded-md p-4"
                 loading="lazy"
                 alt="event_img"
-                src={data.image}
+                src={data.imageUrl}
             />
             <div className="mt-4 sm:mt-0 sm:ml-6 flex flex-col items-start justify-start p-4">
                 <h2 className="mb-2 text-5xl font-semibold">{data.title}</h2>
