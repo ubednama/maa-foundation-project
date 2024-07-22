@@ -1,12 +1,15 @@
 // This page is dedicated to events that are shown on full page
 
 // necessary imports
-import React from "react";
-import { events } from "../Utils/Constant";
+import React, { useContext } from "react";
 import EventCard from "./EventCard";
 import { NavLink } from "react-router-dom";
+import { EventContext } from "../../context/eventContext";
 
 const Events = () => {
+
+  const {events,loading} = useContext(EventContext);
+
   return (
     // main div
     <div className="flex flex-col gap-20 xl:gap-52 justify-center items-center mx-20 2xl:mx-36">
@@ -39,19 +42,22 @@ const Events = () => {
       </div>
 
       {/* event list */}
+      {loading?<div className="flex justify-center items-center h-screen">
+      <h1 className="text-center mt-[20px] text-2xl " >Loading...</h1>
+    </div>:
       <div className="mb-32 flex flex-col gap-36">
         {events.map((data, index) => (
           <EventCard
             key={index}
-            image={data.image}
+            image={data.imageUrl}
             title={data.title}
             subtitle={data.subtitle}
             path={data.path}
-            id={data.id}
+            id={data._id}
             index={index}
           ></EventCard>
         ))}
-      </div>
+      </div>}
     </div>
   );
 };

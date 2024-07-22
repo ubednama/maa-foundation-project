@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
 import validator from "validator";
+import axiosInstance from "../../../axios/axios";
 
 function Footer() {
   const [email, setEmail] = useState("");
@@ -15,15 +16,24 @@ function Footer() {
     setPlaceholder("Enter your email");
   };
 
-  const handleSubscribe = () => {
-    if (isValidEmail) {
-      console.log("Subscribing with email:", email);
-      // TODO: Handle subscription logic here
-      setEmail("");
-      setIsValidEmail(false);
-      setPlaceholder("Enter your email");
-    } else {
-      setPlaceholder("Please enter a valid email address");
+  const handleSubscribe = async(e) => {
+
+    e.preventDefault();
+    try {
+      if (isValidEmail) {
+        console.log("Subscribing with email:", email);
+        await axiosInstance.post('/subscribe',{email});
+        // TODO : Add success toast here for successfull subscribtion 
+        setEmail("");
+        setIsValidEmail(false);
+        setPlaceholder("Enter your email");
+      } else {
+        // TODO : Add error toast here for incorrect email 
+        setPlaceholder("Please enter a valid email address");
+      }
+    } catch (error) {
+      console.log("something went wrong while subscribing")
+      // TODO : Add error toast here 
     }
   };
 
@@ -105,6 +115,7 @@ function Footer() {
             type="button"
             onClick={handleSubscribe}
             disabled={!isValidEmail}
+
           >
             Subscribe
           </button>
