@@ -1,10 +1,15 @@
+import { useContext } from "react";
 import EventDetailCard from "./EventDetailCard";
-import { events } from "../Utils/Constant";
+// import { events } from "../Utils/Constant";
 import { useParams } from "react-router-dom";
+import { EventContext } from "../../context/eventContext";
 
 const EventDetail = () => {
-  const { eventid } = useParams(); 
-  const event = events.find((event) => event.id === parseInt(eventid)); 
+  const {events,loading} = useContext(EventContext);
+  const { eventid } = useParams();
+  // console.log("id in url ",eventid, "type ",typeof(eventid) );
+  // console.log("id from db ",events[0]._id, "type ",typeof(events[0]._id));
+  const event = events.find((event) => event._id === eventid); 
 
   if (!event) {
     return <div>Event not found</div>;
@@ -20,7 +25,7 @@ const EventDetail = () => {
               className="absolute top-0 left-0 w-full h-full object-cover"
               loading="lazy"
               alt=""
-              src={event.image}
+              src={event.imageUrl}
               // onError={} 
               // ToDo add fallback image here
             />

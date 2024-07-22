@@ -1,9 +1,12 @@
-import React from "react";
-import blogsData from "./blogsData";
+import React, { useContext } from "react";
+// import blogsData from "./blogsData";
 import BlogsCard from "./BlogsCard";
 import { image } from "./blogsData";
+import { BlogContext } from "../../context/blogContext";
 
 const Blogs = () => {
+
+  const {blogs} = useContext(BlogContext);  
   return (
     <div className="">
       <div className="relative">
@@ -31,7 +34,7 @@ const Blogs = () => {
 
       <div className=" border pt-5 md:pt-10 lg:pt-20">
         <div className="mx-20 h-auto flex flex-wrap justify-center gap-8">
-          {blogsData.map((item) => {
+          {blogs.map((item) => {
             return (
               <BlogsCard
                 id={item.id}
