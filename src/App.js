@@ -21,11 +21,13 @@ function App() {
     console.log('Current path:', location.pathname);
   }, [location]);
 
+  const isLoginOrSignup = location.pathname === '/login' || location.pathname === '/signup';
+
   return (
     <div className='bg-secondary-light font-lato flex flex-col min-h-screen'>
-      <header className='sticky top-0 z-20'>
+      {!isLoginOrSignup && <header className='sticky top-0 z-20'>
         <Header />
-      </header>
+      </header>}
       <main className='flex-grow'>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -41,11 +43,11 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
-      <footer className='bg-secondary'>
+      {!isLoginOrSignup && <footer className='bg-secondary'>
         <div className="py-10 mx-20 flex justify-between gap-4 text-gray-dark font-light">
           <Footer />
         </div>
-      </footer>
+      </footer>}
     </div>
   );
 }
