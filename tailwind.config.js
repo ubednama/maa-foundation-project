@@ -34,26 +34,14 @@ module.exports = {
           '@apply px-4 py-2 rounded-md font-medium text-white font-lato bg-primary-base': {},
         },
         '.btn-primary:hover': {
-          '@apply hover:bg-primary-dark hover:duration-100': {},
+          '@apply hover:bg-primary-dark duration-100': {},
         },
         '.btn-primary:disabled': {
           '@apply bg-primary-base': {},
           'pointer-events': 'none',
         },
         '.input-field-primary': {
-          '@apply text-sm border border-gray-700 rounded-md px-2 lg:px-4 py-2 w-full lg:py-3 bg-inherit': {},
-          'color': 'gray-500',
-          '&::placeholder': {
-            'color': 'gray-500'
-          },
-          '&:focus': {
-            'border-color': 'black',
-            'outline': 'none',
-            'color': 'black',
-            '&::placeholder': {
-              'color': 'gray-400'
-            }
-          }
+          '@apply text-sm border border-gray-700 rounded-md px-2 lg:px-4 py-2 w-full lg:py-3 bg-inherit placeholder-gray-500 focus:border-black focus:outline-none focus:placeholder-gray-400': {},
         },
         '.nav-link': {
           '@apply block lg:inline-block text-xl hover:text-primary-base hover:underline underline-offset-8 py-2 lg:py-0 lg:mr-8 decoration-2': {},
@@ -63,22 +51,6 @@ module.exports = {
         },
         '.main-heading': {
           '@apply text-primary-base font-semibold': {},
-        },
-        '.checkbox': {
-          '@apply appearance-none text-green-600 w-6 h-6 bg-white rounded-md border border-black focus:ring-2 focus:ring-gray-700 hover:bg-green-600': {},
-          '&:checked': {
-            '@apply bg-green-600 border-green-600': {},
-            '&::after': {
-              content: "'\u2713'",
-              '@apply absolute text-white text-sm font-bold inset-0 flex items-center justify-center': {},
-            },
-          },
-          '&:checked:hover': {
-            '@apply bg-green-900 border-green-900': {},
-          },
-          '&:focus, &:focus-visible': {
-            '@apply outline-none ring-2 ring-green-900': {},
-          },
         },
         '.custom-radio': {
           '@apply absolute opacity-0 w-0 h-0': {},
@@ -105,7 +77,32 @@ module.exports = {
             '@apply ring-2 ring-green-900': {},
           },
         },
+        '.custom-checkbox': {
+          '@apply absolute opacity-0 w-0 h-0': {},
+          '& + label': {
+            '@apply flex items-center cursor-pointer': {},
+            '.custom-checkbox-visual': {
+              '@apply w-6 h-6 inline-block mr-2 rounded-md border-2 border-black bg-white relative': {},
+              '&:hover': {
+                '@apply bg-green-600': {},
+              },
+            },
+          },
+          '&:checked + label .custom-checkbox-visual': {
+            '@apply bg-green-600 border-green-600': {},
+            '&::after': {
+              content: "'\u2713'",
+              '@apply absolute text-white text-sm font-bold inset-0 flex items-center justify-center': {},
+            },
+          },
+          '&:checked:hover + label .custom-checkbox-visual': {
+            '@apply bg-green-900 border-green-900': {},
+          },
+          '&:focus + label .custom-checkbox-visual': {
+            '@apply ring-2 ring-green-900': {},
+          },
+        },
       });
     }),
-  ]
+  ],
 };

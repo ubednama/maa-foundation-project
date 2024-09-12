@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -21,6 +22,9 @@ const Login = () => {
 
       <div className="w-full md:w-1/2 bg-white bg-opacity-90 md:bg-opacity-100 z-20 flex flex-col items-center justify-center p-4 md:p-8">
         <div className="w-full max-w-md space-y-8">
+          <Link to="/" className="group absolute top-4 left-4 p-2 text-white transition-colors py-2 px-6 border backdrop-blur-sm border-primary-base hover:bg-primary-base hover:text-white text-sm font-bold rounded-xl no-underline">
+            <span className="underline text-primary-base group-hover:text-white">Home</span>
+          </Link>
           <div className="text-center">
             <h1 className="text-3xl font-semibold text-primary">Login</h1>
           </div>

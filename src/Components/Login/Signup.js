@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Signup() {
     const [isTermsAgreed, setIsTermsAgreed] = useState(false);
@@ -23,33 +24,45 @@ function Signup() {
     };
 
     return (
-        <div className="flex min-h-screen bg-cover bg-center" style={{
-            backgroundImage: "url('/images/background.jpg')",
-        }}>
-            <div className='w-full' style={{
-                background: "linear-gradient(120deg, transparent 30%, white 50%)",
-            }}>
-                <div className='w-full'></div>
-                <div className="float-right bg-white bg-opacity-100 md:bg-opacity-0 w-full md:w-1/2 z-20 flex flex-col items-center justify-center min-h-screen">
-                    <div className="text-center max-w-md w-full">
-                        <h1 className="my-5 text-4xl font-semibold text-primary-base">
-                            Registration
-                        </h1>
+        <div className="flex min-h-screen bg-cover bg-center relative">
+            <div
+                className="absolute inset-0 z-0 bg-cover bg-center"
+                style={{
+                    backgroundImage: "url('/images/background.jpg')",
+                }}
+            />
+            <div className="w-full md:w-1/2 relative z-10">
+                <div
+                    className="absolute inset-0"
+                    style={{
+                        background:
+                            "linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 1) 100%)",
+                    }}
+                />
+            </div>
+
+            <div className="w-full md:w-1/2 bg-white bg-opacity-90 md:bg-opacity-100 z-20 flex flex-col items-center justify-center p-4 md:p-8">
+                <div className="w-full max-w-md space-y-8">
+                    <Link to="/" className="group absolute top-4 left-4 p-2 text-white transition-colors py-2 px-6 border backdrop-blur-sm border-primary-base hover:bg-primary-base hover:text-white text-sm font-bold rounded-xl no-underline">
+                        <span className="underline text-primary-base group-hover:text-white">Home</span>
+                    </Link>
+                    <div className="text-center">
+                        <h1 className="text-3xl font-semibold text-primary">Registration</h1>
                     </div>
 
-                    <form onSubmit={handleSubmit} className="w-5/6">
-                        <div className="flex justify-center mt-6">
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                        <div className="flex justify-center space-x-4">
                             <input
                                 placeholder="First Name"
-                                className="w-1/2 mr-5 text-gray-500 text-xl border border-gray-700 rounded-[4px] px-2 lg:px-4 py-2 lg:py-3"
+                                className="input-field-primary w-1/2"
                             />
                             <input
                                 placeholder="Last Name"
-                                className="w-1/2 ml-5 text-gray-500 text-xl border border-gray-700 rounded-[4px] px-2 lg:px-4 py-2 lg:py-3"
+                                className="input-field-primary w-1/2"
                             />
                         </div>
 
-                        <div className="flex w-5/6 mt-6 space-x-10 text-xl">
+                        <div className="flex space-x-4">
                             <div className="flex items-center">
                                 <input id="bordered-radio-1" type="radio" value="male" name="gender" className="custom-radio absolute opacity-0 w-0 h-0" defaultChecked />
                                 <label htmlFor="bordered-radio-1" className="flex items-center cursor-pointer">
@@ -66,67 +79,73 @@ function Signup() {
                             </div>
                         </div>
 
-                        <div className="flex flex-col items-center w-full mt-6 space-y-4">
+                        <div className="space-y-4">
                             <input
                                 placeholder="Phone Number"
                                 type='tel'
-                                className="w-full text-gray-500 text-xl border border-gray-700 rounded-[4px] px-2 lg:px-4 py-2 lg:py-3"
+                                className="input-field-primary"
                             />
                             <input
                                 placeholder="Email"
                                 type='email'
-                                className="w-full text-gray-500 text-xl border border-gray-700 rounded-[4px] px-2 lg:px-4 py-2 lg:py-3"
+                                className="input-field-primary"
                             />
                             <input
                                 placeholder="Password"
                                 type='password'
-                                className="w-full text-gray-500 text-xl border border-gray-700 rounded-[4px] px-2 lg:px-4 py-2 lg:py-3"
+                                className="input-field-primary"
                             />
                             <input
                                 placeholder="Confirm Password"
                                 type='password'
-                                className="w-full text-gray-500 text-xl border border-gray-700 rounded-[4px] px-2 lg:px-4 py-2 lg:py-3"
+                                className="input-field-primary"
                             />
                         </div>
 
-                        <div className="flex flex-col w-full mt-6 text-xl">
-                            <div className="flex mt-3 mb-3 items-center">
+                        <div className="space-y-3">
+                            <div className="flex items-center">
                                 <input
                                     type="checkbox"
                                     id="terms-checkbox"
-                                    className='checkbox'
+                                    className="custom-checkbox"
                                     checked={isTermsAgreed}
                                     onChange={handleTermsChange}
                                     required
                                 />
-                                <label htmlFor="terms-checkbox" className="ms-2 text-base text-gray-600 dark:text-gray-900">Agree to the terms and conditions</label>
+                                <label htmlFor="terms-checkbox" className="ms-2 text-base text-gray-600 dark:text-gray-900 cursor-pointer">
+                                    <span className="custom-checkbox-visual w-6 h-6 inline-block mr-2 rounded border-2 border-black flex-shrink-0"></span>
+                                    <span>Agree to the terms and conditions</span>
+                                </label>
                             </div>
 
-                            <div className="flex mt-3 mb-3 items-center">
+                            <div className="flex items-center">
                                 <input
                                     type="checkbox"
                                     id="updates-checkbox"
-                                    className='checkbox'
+                                    className="custom-checkbox"
                                     checked={isUpdatesChecked}
                                     onChange={handleUpdatesChange}
                                 />
-                                <label htmlFor="updates-checkbox" className="ms-2 text-base text-gray-600 dark:text-gray-900">Notify me for all updates</label>
+                                <label htmlFor="updates-checkbox" className="ms-2 text-base text-gray-600 dark:text-gray-900 cursor-pointer">
+                                    <span className="custom-checkbox-visual w-6 h-6 inline-block mr-2 rounded border-2 border-black flex-shrink-0"></span>
+                                    <span>Notify me for all updates</span>
+                                </label>
                             </div>
                         </div>
 
-                        <div className="mt-10 mb-6 w-full max-w-xs sm:max-w-sm flex justify-center">
-                            <button type="submit" className="btn-primary w-2/3 text-xl rounded-[4px]">
+                        <div className="flex justify-center">
+                            <button type="submit" className="btn-primary w-full md:w-2/3 text-lg">
                                 Sign Up
                             </button>
                         </div>
-
-                        <div className="mt-4 mb-2 text-center">
-                            <p className="text-gray-400 text-xl">
-                                Already have an account |{" "}
-                                <a className="text-xl text-primary-base" href="/login">login</a>
-                            </p>
-                        </div>
                     </form>
+
+                    <p className="text-center text-gray-600 text-sm">
+                        Already have an account |{" "}
+                        <a className="text-primary-base hover:underline" href="/login">
+                            login
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -134,4 +153,3 @@ function Signup() {
 }
 
 export default Signup;
-

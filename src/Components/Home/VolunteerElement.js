@@ -124,15 +124,15 @@ const VolunteerElement = () => {
                 type="checkbox"
                 value=""
                 name="agreed"
-                className="checkbox"
+                className="custom-checkbox"
                 checked={volunteerData.agreed}
                 onChange={handleChange}
               />
               <label
                 htmlFor="link-checkbox"
                 className="text-bold font-medium !text-black"
-              >
-                Agree to the terms and conditions.
+              ><span className="custom-checkbox-visual w-6 h-6 inline-block mr-2 rounded border-2 border-black flex-shrink-0"></span>
+                <span>Agree to the terms and conditions.</span>
               </label>
             </div>
             <div className="flex items-center">
