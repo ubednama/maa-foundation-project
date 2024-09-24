@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import {NavLink} from "react-router-dom";
 import Hcomp from "./HoverComp";
 
 const Gallery = () => {
+
+
   return (
       <div className="mx-20 mb-20">       
       <div className="grid grid-cols-1 md:grid-cols-2 mt-6 2xl:gap-8">
@@ -10,15 +12,15 @@ const Gallery = () => {
 
           {/* First div content */}
           <h1 className="heading leading-snug font-semibold">
-            <span className="">Empowering Women Our </span><span className="main-heading">Mission in Action</span>
+            <span className="2xl:text-[60px] lg:text-[50px]">Empowering Women Our </span> <br/> <span className="main-heading 2xl:text-[60px] lg:text-[50px]">Mission in Action</span>
           </h1>
-          <p className="text-[#4d4d4d] text-sm sm:text-base md:text-lg lg:text-xl pr-20 2xl:pr-80 -mt-5">
+          <p className="text-[#4d4d4d] text-sm sm:text-base md:text-lg lg:text-[23px] pr-20 2xl:pr-80 -mt-5 2xl:text-[34px]  2xl:tracking-[2px] 2xl:text-[20px] 2xl:leading-[35px]  xl:text-[20px]">
             Explore our journey of empowering women through impactful
             initiatives. Witness the transformation and strength in every story
             captured in our mission-driven gallery.
           </p>
-          <button className="btn-primary text-sm sm:text-base md:text-lg lg:text-xl">
-            <NavLink to="/contact" className="" >Contact Us</NavLink>
+          <button className="btn-primary text-sm sm:text-base  md:text-lg lg:text-xl 2xl:px-4 2xl:py-3  2xl:w-[200px] 2xl:h-[80px] xl:w-[140px] xl:h-[45px] lg:w-[150px] lg:h-[60px]">
+            <NavLink to="/contact" className=" 2xl:text-[28px] xl:text-[20px] lg:text-[22px]" >Contact Us</NavLink>
           </button>
         </div>
         <div className=" flex justify-center items-center">
